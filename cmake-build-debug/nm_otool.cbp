@@ -87,6 +87,9 @@
 		<Unit filename="/Users/ib/cxim/nm-otool/errors.c">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/file_inside.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/ft_printf/includes/libft/ft_atoi.c">
 			<Option target="nm_otool"/>
 		</Unit>
@@ -418,6 +421,9 @@
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/ft_printf/srcs/work_with_x_big.c">
+			<Option target="nm_otool"/>
+		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/magic.c">
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/main.c">

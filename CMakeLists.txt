@@ -121,4 +121,5 @@ add_executable(nm_otool
 		ft_printf/srcs/work_with_x_big.c
 		errors.c
 		main.c
-		nmotool.h)
+		file_inside.c
+		nmotool.h magic.c)

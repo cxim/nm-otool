@@ -150,6 +150,33 @@ errors.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/errors.c.s
 .PHONY : errors.c.s
 
+file_inside.o: file_inside.c.o
+
+.PHONY : file_inside.o
+
+# target to build an object file
+file_inside.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/file_inside.c.o
+.PHONY : file_inside.c.o
+
+file_inside.i: file_inside.c.i
+
+.PHONY : file_inside.i
+
+# target to preprocess a source file
+file_inside.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/file_inside.c.i
+.PHONY : file_inside.c.i
+
+file_inside.s: file_inside.c.s
+
+.PHONY : file_inside.s
+
+# target to generate assembly for a file
+file_inside.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/file_inside.c.s
+.PHONY : file_inside.c.s
+
 ft_printf/includes/libft/ft_atoi.o: ft_printf/includes/libft/ft_atoi.c.o
 
 .PHONY : ft_printf/includes/libft/ft_atoi.o
@@ -3093,6 +3120,33 @@ ft_printf/srcs/work_with_x_big.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.s
 .PHONY : ft_printf/srcs/work_with_x_big.c.s
 
+magic.o: magic.c.o
+
+.PHONY : magic.o
+
+# target to build an object file
+magic.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/magic.c.o
+.PHONY : magic.c.o
+
+magic.i: magic.c.i
+
+.PHONY : magic.i
+
+# target to preprocess a source file
+magic.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/magic.c.i
+.PHONY : magic.c.i
+
+magic.s: magic.c.s
+
+.PHONY : magic.s
+
+# target to generate assembly for a file
+magic.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/magic.c.s
+.PHONY : magic.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -3132,6 +3186,9 @@ help:
 	@echo "... errors.o"
 	@echo "... errors.i"
 	@echo "... errors.s"
+	@echo "... file_inside.o"
+	@echo "... file_inside.i"
+	@echo "... file_inside.s"
 	@echo "... ft_printf/includes/libft/ft_atoi.o"
 	@echo "... ft_printf/includes/libft/ft_atoi.i"
 	@echo "... ft_printf/includes/libft/ft_atoi.s"
@@ -3459,6 +3516,9 @@ help:
 	@echo "... ft_printf/srcs/work_with_x_big.o"
 	@echo "... ft_printf/srcs/work_with_x_big.i"
 	@echo "... ft_printf/srcs/work_with_x_big.s"
+	@echo "... magic.o"
+	@echo "... magic.i"
+	@echo "... magic.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

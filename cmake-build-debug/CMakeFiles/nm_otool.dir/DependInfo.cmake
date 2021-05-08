@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/ib/cxim/nm-otool/errors.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/errors.c.o"
+  "/Users/ib/cxim/nm-otool/file_inside.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/file_inside.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/includes/libft/ft_atoi.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/includes/libft/ft_bzero.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_bzero.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/includes/libft/ft_char_in_string.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_char_in_string.c.o"
@@ -114,6 +115,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ib/cxim/nm-otool/ft_printf/srcs/work_with_uxo_part_one.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_one.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/srcs/work_with_uxo_part_two.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_two.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/srcs/work_with_x_big.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.o"
+  "/Users/ib/cxim/nm-otool/magic.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/magic.c.o"
   "/Users/ib/cxim/nm-otool/main.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

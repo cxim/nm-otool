@@ -18,20 +18,31 @@ void get_info_file(char *name_file)
 {
 	struct stat stat;
 	int		fd;
-	void	*file_length;
+	void	*file_length_bytes;
+
+	file_length_bytes = mmap(0, (size_t)stat.st_size, PROT_READ |
+	PROT_WRITE, MAP_PRIVATE, fd, 0);
 
 	if ((fd = open(name_file, O_RDONLY)) == -1)
+	{
 		errors_nm_otool(OPEN);
+		return;
+	}
 	if (fstat(fd, &stat) == -1)
 		errors_nm_otool(FSTAT);
-	if ((file_length = mmap(0, (size_t)stat.st_size, PROT_READ |
-		PROT_WRITE, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
+	if (file_length_bytes == MAP_FAILED)
 		errors_nm_otool(MMAP);
 
-	if (munmap(file_length, (size_t)stat.st_size) == -1)
+
+	if (munmap(file_length_bytes, (size_t)stat.st_size) == -1)
+	{
 		errors_nm_otool(MMAP);
+		return;
+	}
 	if (close(fd) == -1)
 		errors_nm_otool(CLOSE);
+	work_inside_binary(file_length_bytes, stat.st_size, name_file);
+
 }
 
 int		main(int ac, char **av)

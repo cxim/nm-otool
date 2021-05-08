@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/errors.c.o"
+  "CMakeFiles/nm_otool.dir/file_inside.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_bzero.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_char_in_string.c.o"
@@ -109,6 +110,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_one.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_two.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.o"
+  "CMakeFiles/nm_otool.dir/magic.c.o"
   "CMakeFiles/nm_otool.dir/main.c.o"
   "nm_otool"
   "nm_otool.pdb"
