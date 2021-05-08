@@ -28,13 +28,9 @@ fcntl.h
 libft/libft.h
 /Users/ib/cxim/nm-otool/ft_printf/includes/libft/libft.h
 
-/Users/ib/cxim/nm-otool/main.c
+/Users/ib/cxim/nm-otool/magic.c
 nmotool.h
 /Users/ib/cxim/nm-otool/nmotool.h
-stdio.h
--
-sys/types.h
--
 
 /Users/ib/cxim/nm-otool/nmotool.h
 ft_printf/includes/printf.h

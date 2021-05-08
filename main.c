@@ -20,8 +20,7 @@ void get_info_file(char *name_file)
 	int		fd;
 	void	*file_length_bytes;
 
-	file_length_bytes = mmap(0, (size_t)stat.st_size, PROT_READ |
-	PROT_WRITE, MAP_PRIVATE, fd, 0);
+
 
 	if ((fd = open(name_file, O_RDONLY)) == -1)
 	{
@@ -30,18 +29,23 @@ void get_info_file(char *name_file)
 	}
 	if (fstat(fd, &stat) == -1)
 		errors_nm_otool(FSTAT);
+	file_length_bytes = mmap(0, (size_t)stat.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
 	if (file_length_bytes == MAP_FAILED)
+	{
 		errors_nm_otool(MMAP);
-
-
+		return;
+	}
+	work_inside_binary(file_length_bytes, stat.st_size, name_file);
 	if (munmap(file_length_bytes, (size_t)stat.st_size) == -1)
 	{
 		errors_nm_otool(MMAP);
 		return;
 	}
+
+
 	if (close(fd) == -1)
 		errors_nm_otool(CLOSE);
-	work_inside_binary(file_length_bytes, stat.st_size, name_file);
+
 
 }
 

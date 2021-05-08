@@ -6,8 +6,9 @@
 
 char *get_magic(char *flb, size_t stat_size)
 {
-	unsigned int *tmp = (unsigned int*) flb;
+//	unsigned int *tmp = (unsigned int*) flb;
 
+	stat_size += 1;
 	if (*(unsigned int*)flb == MH_CIGAM)
 		return ("lol");
 	else if (*(unsigned int*)flb == MH_CIGAM_64)
@@ -26,5 +27,5 @@ char *get_magic(char *flb, size_t stat_size)
 //	else if (*tmp == FAT_CIGAM_64)
 //		return ("lol");
 //	printf("%zu", stat_size);
-	return (char*)tmp;
+	return flb;
 }

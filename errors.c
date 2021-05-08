@@ -16,7 +16,7 @@ void	errors_nm_otool(enum errors error)
 	else if (error == FSTAT)
 		write(2, "fstat problem.\n", 16);
 	else if (error == MMAP)
-		write(2, "mmap error\n", 12); //fail open dirs
+		write(2, "mmap error\n", 11); //fail open dirs
 	else if (error == CLOSE)
 		write(2, "cant close file\n", 21);
 
