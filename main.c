@@ -1,0 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnarwhal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/22 16:51:53 by mnarwhal          #+#    #+#             */
+/*   Updated: 2020/08/22 16:53:10 by mnarwhal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "nmotool.h"
+#include <stdio.h>
+#include <sys/types.h>
+
+void get_info_file(char *name_file)
+{
+//	struct fstat stat;
+	int		fd;
+
+	if ((fd = open(name_file, O_RDONLY)) == -1)
+		errors_nm_otool(OPEN);
+
+}
+
+int		main(int ac, char **av)
+{
+	if (ac < 2)
+		errors_nm_otool(ARG);
+	av += 1;
+	if (ac > 2) //if no errors and files > 1
+		while (*av)
+		{
+			write(1, "\n", 1);
+			ft_putstr(*av);
+			write(1, ":\n", 2);
+			get_info_file(*av);
+			av += 1;
+		}
+	else //if 1 file
+		get_info_file(av[0]);
+	return (0);
+}
