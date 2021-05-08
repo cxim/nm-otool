@@ -16,12 +16,22 @@
 
 void get_info_file(char *name_file)
 {
-//	struct fstat stat;
+	struct stat stat;
 	int		fd;
+	void	*file_length;
 
 	if ((fd = open(name_file, O_RDONLY)) == -1)
 		errors_nm_otool(OPEN);
+	if (fstat(fd, &stat) == -1)
+		errors_nm_otool(FSTAT);
+	if ((file_length = mmap(0, (size_t)stat.st_size, PROT_READ |
+		PROT_WRITE, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
+		errors_nm_otool(MMAP);
 
+	if (munmap(file_length, (size_t)stat.st_size) == -1)
+		errors_nm_otool(MMAP);
+	if (close(fd) == -1)
+		errors_nm_otool(CLOSE);
 }
 
 int		main(int ac, char **av)

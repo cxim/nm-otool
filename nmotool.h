@@ -8,6 +8,7 @@
 # include "ft_printf/includes/printf.h"
 # include <sys/stat.h>
 # include <sys/wait.h>
+# include <sys/mman.h>
 
 enum	errors
 {
