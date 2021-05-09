@@ -19,5 +19,8 @@ void	errors_nm_otool(enum errors error)
 		write(2, "mmap error\n", 11); //fail open dirs
 	else if (error == CLOSE)
 		write(2, "cant close file\n", 21);
-
+	else if (error == ARCH_ERR)
+	    write(2, "error: architecture problem\n", 29);
+	else if (error == CORR_BIN)
+		write(2, "file corrupted\n", 16);
 }

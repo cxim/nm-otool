@@ -12,7 +12,7 @@ char *get_magic(char *flb, size_t stat_size)
 	if (*(unsigned int*)flb == MH_CIGAM)
 		return ("lol");
 	else if (*(unsigned int*)flb == MH_CIGAM_64)
-		return ("lol");
+		return (flb);
 	else if (*(unsigned int*)flb == FAT_CIGAM)
 		return ("lol");
 	else if (*(unsigned int*)flb == FAT_CIGAM_64)

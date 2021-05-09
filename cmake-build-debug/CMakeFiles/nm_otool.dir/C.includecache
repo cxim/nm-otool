@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/ib/cxim/nm-otool/ft_printf/includes/libft/libft.h
+/Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
 unistd.h
 -
 stdlib.h
@@ -16,7 +16,7 @@ string.h
 fcntl.h
 -
 
-/Users/ib/cxim/nm-otool/ft_printf/includes/printf.h
+/Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
 stdio.h
 -
 unistd.h
@@ -26,15 +26,15 @@ stdarg.h
 fcntl.h
 -
 libft/libft.h
-/Users/ib/cxim/nm-otool/ft_printf/includes/libft/libft.h
+/Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
 
-/Users/ib/cxim/nm-otool/magic.c
+/Users/mnarwhal/Desktop/nm-otool/magic.c
 nmotool.h
-/Users/ib/cxim/nm-otool/nmotool.h
+/Users/mnarwhal/Desktop/nm-otool/nmotool.h
 
-/Users/ib/cxim/nm-otool/nmotool.h
+/Users/mnarwhal/Desktop/nm-otool/nmotool.h
 ft_printf/includes/printf.h
-/Users/ib/cxim/nm-otool/ft_printf/includes/printf.h
+/Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
 sys/stat.h
 -
 sys/wait.h
