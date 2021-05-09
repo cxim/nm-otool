@@ -28,6 +28,10 @@ char 	*swap_bytes(char *flb, size_t stat_size, int size_arch)
 	struct symtab_command	*sc;
 
 	reverse_size(flb, stat_size);
+	mh = (struct mach_header*)flb;
+	if ((sc = (struct symtab_command*)get_symtab(flb, stat_size, size_arch)) == NULL)
+		return (NULL);
+	reverse_size(flb + sc->stroff, sc->strsize);
 	return (flb);
 }
 
@@ -40,7 +44,7 @@ char *get_endian_reverse(char *flb, size_t stat_size)
 	if (*(unsigned int*)flb == MH_CIGAM)
 		return (swap_bytes(flb, stat_size, 32));
 	else if (*(unsigned int*)flb == MH_CIGAM_64)
-		return (flb);
+		return (swap_bytes(flb, stat_size, 64));
 	else if (*(unsigned int*)flb == FAT_CIGAM)
 		return ("lol");
 	else if (*(unsigned int*)flb == FAT_CIGAM_64)

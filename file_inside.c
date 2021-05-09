@@ -6,10 +6,12 @@
 
 void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 {
-    t_list	*list;
+    t_lst	*list;
 
 	flb = get_endian_reverse(flb, stat_size);
-	if (*(unsigned int*)flb == MH_MAGIC_64)
+	if (flb == NULL)
+		return;
+	else if (*(unsigned int*)flb == MH_MAGIC_64)
 		list = mach_o(flb, stat_size, 64);
 	else if (*(unsigned int*)flb == MH_MAGIC)
 		ft_printf("yes");

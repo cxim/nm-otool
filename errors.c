@@ -22,5 +22,5 @@ void	errors_nm_otool(enum errors error)
 	else if (error == ARCH_ERR)
 	    write(2, "error: architecture problem\n", 29);
 	else if (error == CORR_BIN)
-		write(2, "file corrupted\n", 16);
+		write(2, "file corrupted\n", 15);
 }

@@ -110,6 +110,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_one.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_two.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.o"
+  "CMakeFiles/nm_otool.dir/lst_fuctions.c.o"
   "CMakeFiles/nm_otool.dir/mach_o.c.o"
   "CMakeFiles/nm_otool.dir/magic.c.o"
   "CMakeFiles/nm_otool.dir/main.c.o"
