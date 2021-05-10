@@ -23,6 +23,7 @@ typedef struct			s_data
 
 typedef struct			s_lst
 {
+	int 				arch_size;
 	t_data				data;
 	struct s_lst		*next;
 }						t_lst;
@@ -42,8 +43,10 @@ enum	errors
 void	errors_nm_otool(enum errors error);
 void	work_inside_binary(char *flb, size_t stat_size, char *file_name);
 char *get_endian_reverse(char *flb, size_t stat_size);
-t_lst *mach_o(char *flb, size_t file_size, char size_arch);
+t_lst *mach_o(char *flb, size_t file_size, char size_arch, char *a_s);
 void *get_symtab(char *flb, size_t file_size, char size_arch);
 void	new_elem_lst(t_lst **head, char *name, char type, size_t offset);
+t_lst	*sorting_lst(t_lst *head);
+void print_lst(t_lst *lst, char arch_size);
 
 #endif //NM_OTOOL_NMOTOOL_H

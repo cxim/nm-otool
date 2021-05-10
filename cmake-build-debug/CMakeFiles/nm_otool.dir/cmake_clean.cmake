@@ -114,6 +114,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/mach_o.c.o"
   "CMakeFiles/nm_otool.dir/magic.c.o"
   "CMakeFiles/nm_otool.dir/main.c.o"
+  "CMakeFiles/nm_otool.dir/print_nm.c.o"
   "nm_otool"
   "nm_otool.pdb"
 )

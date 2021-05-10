@@ -5,25 +5,25 @@
 #include "nmotool.h"
 
 #define NSECTS_64 (int)(&((struct segment_command_64*)(0x0))->nsects)
-#define NSECTS_32 (int)(&((struct segment_command*)(0x0))->nsects)
-#define HDR_NCMDS (int)(&((struct mach_header*)(0x0))->ncmds)
+#define NSECTS (int)(&((struct segment_command*)(0x0))->nsects)
+#define MH_NCMDS (int)(&((struct mach_header*)(0x0))->ncmds)
 
 
-char	*check_part_segment(void *addr, size_t *j, char arch, char n)
+char	*check_part_segment(void *addr, size_t *j, char arch_size, char n)
 {
 	struct section_64	*sect_64;
 	struct section		*sect_32;
 	size_t				i;
 
 	i = 0;
-	sect_32 = (void*)(addr + (arch == 64 ? sizeof(struct segment_command_64) :
+	sect_32 = (void*)(addr + (arch_size == 64 ? sizeof(struct segment_command_64) :
 							  sizeof(struct segment_command)));
 	sect_64 = (void*)sect_32;
 	while (i < *((unsigned int*)((void*)addr +
-								 (arch == 64 ? NSECTS_64 : NSECTS_32))))
+								 (arch_size == 64 ? NSECTS_64 : NSECTS))))
 	{
 		if (n == (char)*j)
-			return (arch == 64 ? sect_64->sectname : sect_32->sectname);
+			return (arch_size == 64 ? sect_64->sectname : sect_32->sectname);
 		sect_32 += 1;
 		sect_64 += 1;
 		i += 1;
@@ -44,7 +44,7 @@ char	*get_sect_tab(char *flb, size_t file_size, char arch_size, char n)
 	j = 1;
 	lc = (void*)flb + (arch_size == 32 ? sizeof(struct mach_header) :
 					   sizeof(struct mach_header_64));
-	while (index++ < *((unsigned int*)(flb + HDR_NCMDS)) &&
+	while (index++ < *((unsigned int*)(flb + MH_NCMDS)) &&
 		   (void*)lc < file_size + (void*)flb)
 	{
 		if (lc->cmd == (arch_size == 64 ? LC_SEGMENT_64 : LC_SEGMENT) && !(i = 0))
@@ -82,12 +82,12 @@ char 	type(uint16_t section, char *flb, size_t file_size, char arch_size)
 	sec = section >> 8;
 	if ((type_section & N_TYPE) == N_UNDF && sec == 0)
 		ret = 'U';
+	else if ((type_section & N_TYPE) == N_SECT)
+		ret = type_part_two(flb, file_size, arch_size, sec);
 	else if ((type_section & N_TYPE) == N_ABS)
 		ret = 'A';
 	else if ((type_section & N_TYPE) == N_INDR)
 		ret = 'I';
-	else if ((type_section & N_TYPE) == N_SECT)
-		ret = type_part_two(flb, file_size, arch_size, sec);
 	else
 		return ('?');
 	return ((type_section & N_EXT) ? ret : ret + 32);
@@ -121,7 +121,7 @@ void *get_symtab(char *flb, size_t file_size, char size_arch)
 	return ((void*)lc);
 }
 
-t_lst *mach_o(char *flb, size_t file_size, char size_arch)
+t_lst *mach_o(char *flb, size_t file_size, char size_arch, char *ar)
 {
 	t_lst *list;
 	struct symtab_command	*sc;
@@ -135,7 +135,7 @@ t_lst *mach_o(char *flb, size_t file_size, char size_arch)
 	list = NULL;
 	nl = (void*)flb + sc->symoff;
 	nl64 = (void*)flb + sc->symoff;
-
+	*ar = size_arch;
 	while (++i < sc->nsyms)
 		if (size_arch == 64 && (nl64[i].n_type == 1 || nl64[i].n_type == 14
 								|| nl64[i].n_type == 15 || nl64[i].n_type == 0

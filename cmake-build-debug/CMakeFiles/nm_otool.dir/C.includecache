@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/ib/cxim/nm-otool/errors.c
-nmotool.h
-/Users/ib/cxim/nm-otool/nmotool.h
-
 /Users/ib/cxim/nm-otool/file_inside.c
 nmotool.h
 /Users/ib/cxim/nm-otool/nmotool.h
@@ -35,26 +31,6 @@ fcntl.h
 -
 libft/libft.h
 /Users/ib/cxim/nm-otool/ft_printf/includes/libft/libft.h
-
-/Users/ib/cxim/nm-otool/lst_fuctions.c
-nmotool.h
-/Users/ib/cxim/nm-otool/nmotool.h
-
-/Users/ib/cxim/nm-otool/mach_o.c
-nmotool.h
-/Users/ib/cxim/nm-otool/nmotool.h
-
-/Users/ib/cxim/nm-otool/magic.c
-nmotool.h
-/Users/ib/cxim/nm-otool/nmotool.h
-
-/Users/ib/cxim/nm-otool/main.c
-nmotool.h
-/Users/ib/cxim/nm-otool/nmotool.h
-stdio.h
--
-sys/types.h
--
 
 /Users/ib/cxim/nm-otool/nmotool.h
 ft_printf/includes/printf.h

@@ -119,6 +119,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ib/cxim/nm-otool/mach_o.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/mach_o.c.o"
   "/Users/ib/cxim/nm-otool/magic.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/magic.c.o"
   "/Users/ib/cxim/nm-otool/main.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/main.c.o"
+  "/Users/ib/cxim/nm-otool/print_nm.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/print_nm.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

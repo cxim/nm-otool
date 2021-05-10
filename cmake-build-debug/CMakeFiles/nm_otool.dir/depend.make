@@ -388,3 +388,8 @@ CMakeFiles/nm_otool.dir/main.c.o: ../ft_printf/includes/printf.h
 CMakeFiles/nm_otool.dir/main.c.o: ../main.c
 CMakeFiles/nm_otool.dir/main.c.o: ../nmotool.h
 
+CMakeFiles/nm_otool.dir/print_nm.c.o: ../ft_printf/includes/libft/libft.h
+CMakeFiles/nm_otool.dir/print_nm.c.o: ../ft_printf/includes/printf.h
+CMakeFiles/nm_otool.dir/print_nm.c.o: ../nmotool.h
+CMakeFiles/nm_otool.dir/print_nm.c.o: ../print_nm.c
+

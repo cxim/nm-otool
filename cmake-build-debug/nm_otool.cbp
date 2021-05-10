@@ -438,6 +438,9 @@
 		<Unit filename="/Users/ib/cxim/nm-otool/nmotool.h">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/print_nm.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

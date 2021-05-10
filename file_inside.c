@@ -7,12 +7,15 @@
 void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 {
     t_lst	*list;
+    char	arch_size;
 
+    list = NULL;
+    arch_size = '\0';
 	flb = get_endian_reverse(flb, stat_size);
 	if (flb == NULL)
 		return;
 	else if (*(unsigned int*)flb == MH_MAGIC_64)
-		list = mach_o(flb, stat_size, 64);
+		list = mach_o(flb, stat_size, 64, &arch_size);
 	else if (*(unsigned int*)flb == MH_MAGIC)
 		ft_printf("yes");
 	else if (*(unsigned int*)flb == FAT_MAGIC_64)
@@ -21,5 +24,9 @@ void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 		ft_printf("yes");
 	else
 		errors_nm_otool(ARCH_ERR);
-	ft_printf("%s", file_name);
+	file_name = "lol";
+//	ft_printf("%c\n", &arch_size);
+	sorting_lst(list);
+	print_lst(list, arch_size);
+//	ft_printf("%s", file_name);
 }

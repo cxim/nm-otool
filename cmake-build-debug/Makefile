@@ -3228,6 +3228,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/main.c.s
 .PHONY : main.c.s
 
+print_nm.o: print_nm.c.o
+
+.PHONY : print_nm.o
+
+# target to build an object file
+print_nm.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm.c.o
+.PHONY : print_nm.c.o
+
+print_nm.i: print_nm.c.i
+
+.PHONY : print_nm.i
+
+# target to preprocess a source file
+print_nm.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm.c.i
+.PHONY : print_nm.c.i
+
+print_nm.s: print_nm.c.s
+
+.PHONY : print_nm.s
+
+# target to generate assembly for a file
+print_nm.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm.c.s
+.PHONY : print_nm.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -3582,6 +3609,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... print_nm.o"
+	@echo "... print_nm.i"
+	@echo "... print_nm.s"
 .PHONY : help
 
 

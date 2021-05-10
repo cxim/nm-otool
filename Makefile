@@ -1,6 +1,6 @@
 C_FLAGS =  -I
 NAME = nm
-SRCS = main.c errors.c file_inside.c magic.c mach_o.c lst_fuctions.c
+SRCS = main.c errors.c file_inside.c magic.c mach_o.c lst_fuctions.c print_nm.c
 G_FLAGS = -Wall -Werror -Wextra
 OBJECTS = $(SRCS:.c=.o)
 LIBFT = ft_printf/

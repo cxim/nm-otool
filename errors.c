@@ -9,18 +9,18 @@ void	errors_nm_otool(enum errors error)
 {
 	if (error == ARG)
 	{
-		write(2, "a.out: No such file or directory.\n", 34);
+		ft_putstr_fd("a.out: No such file or directory.\n", 2);
 	}
 	else if (error == OPEN)
-		write(2, "No such file or directory.\n", 31);
+		ft_putstr_fd("No such file or directory.\n", 2);
 	else if (error == FSTAT)
-		write(2, "fstat problem.\n", 16);
+		ft_putstr_fd("fstat problem.\n", 2);
 	else if (error == MMAP)
-		write(2, "mmap error\n", 11); //fail open dirs
+		ft_putstr_fd("mmap error\n", 2); //fail open dirs
 	else if (error == CLOSE)
-		write(2, "cant close file\n", 21);
+		ft_putstr_fd("cant close file\n", 2);
 	else if (error == ARCH_ERR)
-	    write(2, "error: architecture problem\n", 29);
+	    ft_putstr_fd("error: architecture problem\n", 2);
 	else if (error == CORR_BIN)
-		write(2, "file corrupted\n", 15);
+		ft_putstr_fd("file corrupted\n", 2);
 }
