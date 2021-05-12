@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/errors.c.o"
+  "CMakeFiles/nm_otool.dir/fat_o.c.o"
   "CMakeFiles/nm_otool.dir/file_inside.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_bzero.c.o"

@@ -17,16 +17,20 @@ void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 	else if (*(unsigned int*)flb == MH_MAGIC_64)
 		list = mach_o(flb, stat_size, 64, &arch_size);
 	else if (*(unsigned int*)flb == MH_MAGIC)
-		ft_printf("yes");
+		list = mach_o(flb, stat_size, 32, &arch_size);
 	else if (*(unsigned int*)flb == FAT_MAGIC_64)
-		ft_printf("yes");
+	{
+		list = fat_o(flb, stat_size, 64, file_name);
+		arch_size = 64;
+	}
 	else if (*(unsigned int*)flb == FAT_MAGIC)
-		ft_printf("yes");
+	{
+		list = fat_o(flb, stat_size, 32, file_name);
+		arch_size = 32;
+	}
 	else
 		errors_nm_otool(ARCH_ERR);
-	file_name = "lol";
-//	ft_printf("%c\n", &arch_size);
 	sorting_lst(list);
 	print_lst(list, arch_size);
-//	ft_printf("%s", file_name);
+	free_lst(list);
 }

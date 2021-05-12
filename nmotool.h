@@ -23,7 +23,6 @@ typedef struct			s_data
 
 typedef struct			s_lst
 {
-	int 				arch_size;
 	t_data				data;
 	struct s_lst		*next;
 }						t_lst;
@@ -48,5 +47,7 @@ void *get_symtab(char *flb, size_t file_size, char size_arch);
 void	new_elem_lst(t_lst **head, char *name, char type, size_t offset);
 t_lst	*sorting_lst(t_lst *head);
 void print_lst(t_lst *lst, char arch_size);
+void	free_lst(t_lst *lst);
+t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name);
 
 #endif //NM_OTOOL_NMOTOOL_H

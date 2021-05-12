@@ -87,6 +87,9 @@
 		<Unit filename="/Users/ib/cxim/nm-otool/errors.c">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/fat_o.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/file_inside.c">
 			<Option target="nm_otool"/>
 		</Unit>

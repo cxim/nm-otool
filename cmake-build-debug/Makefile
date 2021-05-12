@@ -150,6 +150,33 @@ errors.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/errors.c.s
 .PHONY : errors.c.s
 
+fat_o.o: fat_o.c.o
+
+.PHONY : fat_o.o
+
+# target to build an object file
+fat_o.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o.c.o
+.PHONY : fat_o.c.o
+
+fat_o.i: fat_o.c.i
+
+.PHONY : fat_o.i
+
+# target to preprocess a source file
+fat_o.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o.c.i
+.PHONY : fat_o.c.i
+
+fat_o.s: fat_o.c.s
+
+.PHONY : fat_o.s
+
+# target to generate assembly for a file
+fat_o.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o.c.s
+.PHONY : fat_o.c.s
+
 file_inside.o: file_inside.c.o
 
 .PHONY : file_inside.o
@@ -3267,6 +3294,9 @@ help:
 	@echo "... errors.o"
 	@echo "... errors.i"
 	@echo "... errors.s"
+	@echo "... fat_o.o"
+	@echo "... fat_o.i"
+	@echo "... fat_o.s"
 	@echo "... file_inside.o"
 	@echo "... file_inside.i"
 	@echo "... file_inside.s"

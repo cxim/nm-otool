@@ -4,6 +4,18 @@
 
 #include "nmotool.h"
 
+void	free_lst(t_lst *lst)
+{
+	t_lst	*tmp;
+
+	while (lst)
+	{
+		tmp = lst;
+		lst = lst->next;
+		free(tmp);
+	}
+}
+
 int		is_sorted(t_lst *lst)
 {
 	while (lst && lst->next)

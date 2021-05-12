@@ -35,6 +35,15 @@ char 	*swap_bytes(char *flb, size_t stat_size, int size_arch)
 	return (flb);
 }
 
+char 	*swap_bytes_fat(char *flb, int size_arch)
+{
+	reverse_size(flb, 8);
+	reverse_size(flb + 8, *(unsigned int*)(flb + 4) * (size_arch == 64 ?
+													   sizeof(struct fat_arch) : sizeof(struct fat_arch_64)));
+	return (flb);
+}
+
+
 
 char *get_endian_reverse(char *flb, size_t stat_size)
 {
@@ -46,9 +55,9 @@ char *get_endian_reverse(char *flb, size_t stat_size)
 	else if (*(unsigned int*)flb == MH_CIGAM_64)
 		return (swap_bytes(flb, stat_size, 64));
 	else if (*(unsigned int*)flb == FAT_CIGAM)
-		return ("lol");
+		return (swap_bytes_fat(flb, 32));
 	else if (*(unsigned int*)flb == FAT_CIGAM_64)
-		return ("lol");
+		return (swap_bytes_fat(flb, 64));
 
 //	if (*tmp == MH_CIGAM)
 //		return ("lol");
