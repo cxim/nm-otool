@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/ib/cxim/nm-otool/cpu_file.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/errors.c">
 			<Option target="nm_otool"/>
 		</Unit>
@@ -432,13 +435,19 @@
 		<Unit filename="/Users/ib/cxim/nm-otool/mach_o.c">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/mach_o_otool.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/magic.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/main.c">
+		<Unit filename="/Users/ib/cxim/nm-otool/nm.c">
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/nmotool.h">
+			<Option target="nm_otool"/>
+		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/print_nm.c">

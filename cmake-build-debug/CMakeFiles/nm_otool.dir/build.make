@@ -1487,18 +1487,18 @@ CMakeFiles/nm_otool.dir/errors.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/errors.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/errors.c -o CMakeFiles/nm_otool.dir/errors.c.s
 
-CMakeFiles/nm_otool.dir/main.c.o: CMakeFiles/nm_otool.dir/flags.make
-CMakeFiles/nm_otool.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/nm_otool.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/main.c.o   -c /Users/ib/cxim/nm-otool/main.c
+CMakeFiles/nm_otool.dir/nm.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/nm.c.o: ../nm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/nm_otool.dir/nm.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/nm.c.o   -c /Users/ib/cxim/nm-otool/nm.c
 
-CMakeFiles/nm_otool.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ib/cxim/nm-otool/main.c > CMakeFiles/nm_otool.dir/main.c.i
+CMakeFiles/nm_otool.dir/nm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/nm.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ib/cxim/nm-otool/nm.c > CMakeFiles/nm_otool.dir/nm.c.i
 
-CMakeFiles/nm_otool.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/main.c -o CMakeFiles/nm_otool.dir/main.c.s
+CMakeFiles/nm_otool.dir/nm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/nm.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/nm.c -o CMakeFiles/nm_otool.dir/nm.c.s
 
 CMakeFiles/nm_otool.dir/file_inside.c.o: CMakeFiles/nm_otool.dir/flags.make
 CMakeFiles/nm_otool.dir/file_inside.c.o: ../file_inside.c
@@ -1577,6 +1577,45 @@ CMakeFiles/nm_otool.dir/fat_o.c.i: cmake_force
 CMakeFiles/nm_otool.dir/fat_o.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/fat_o.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/fat_o.c -o CMakeFiles/nm_otool.dir/fat_o.c.s
+
+CMakeFiles/nm_otool.dir/cpu_file.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/cpu_file.c.o: ../cpu_file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/nm_otool.dir/cpu_file.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/cpu_file.c.o   -c /Users/ib/cxim/nm-otool/cpu_file.c
+
+CMakeFiles/nm_otool.dir/cpu_file.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/cpu_file.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ib/cxim/nm-otool/cpu_file.c > CMakeFiles/nm_otool.dir/cpu_file.c.i
+
+CMakeFiles/nm_otool.dir/cpu_file.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/cpu_file.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/cpu_file.c -o CMakeFiles/nm_otool.dir/cpu_file.c.s
+
+CMakeFiles/nm_otool.dir/otool.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/otool.c.o: ../otool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/nm_otool.dir/otool.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/otool.c.o   -c /Users/ib/cxim/nm-otool/otool.c
+
+CMakeFiles/nm_otool.dir/otool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/otool.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ib/cxim/nm-otool/otool.c > CMakeFiles/nm_otool.dir/otool.c.i
+
+CMakeFiles/nm_otool.dir/otool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/otool.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/otool.c -o CMakeFiles/nm_otool.dir/otool.c.s
+
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: ../mach_o_otool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/nm_otool.dir/mach_o_otool.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/mach_o_otool.c.o   -c /Users/ib/cxim/nm-otool/mach_o_otool.c
+
+CMakeFiles/nm_otool.dir/mach_o_otool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/mach_o_otool.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ib/cxim/nm-otool/mach_o_otool.c > CMakeFiles/nm_otool.dir/mach_o_otool.c.i
+
+CMakeFiles/nm_otool.dir/mach_o_otool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/mach_o_otool.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ib/cxim/nm-otool/mach_o_otool.c -o CMakeFiles/nm_otool.dir/mach_o_otool.c.s
 
 # Object files for target nm_otool
 nm_otool_OBJECTS = \
@@ -1690,13 +1729,16 @@ nm_otool_OBJECTS = \
 "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_two.c.o" \
 "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.o" \
 "CMakeFiles/nm_otool.dir/errors.c.o" \
-"CMakeFiles/nm_otool.dir/main.c.o" \
+"CMakeFiles/nm_otool.dir/nm.c.o" \
 "CMakeFiles/nm_otool.dir/file_inside.c.o" \
 "CMakeFiles/nm_otool.dir/magic.c.o" \
 "CMakeFiles/nm_otool.dir/mach_o.c.o" \
 "CMakeFiles/nm_otool.dir/lst_fuctions.c.o" \
 "CMakeFiles/nm_otool.dir/print_nm.c.o" \
-"CMakeFiles/nm_otool.dir/fat_o.c.o"
+"CMakeFiles/nm_otool.dir/fat_o.c.o" \
+"CMakeFiles/nm_otool.dir/cpu_file.c.o" \
+"CMakeFiles/nm_otool.dir/otool.c.o" \
+"CMakeFiles/nm_otool.dir/mach_o_otool.c.o"
 
 # External object files for target nm_otool
 nm_otool_EXTERNAL_OBJECTS =
@@ -1811,16 +1853,19 @@ nm_otool: CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_one.c.o
 nm_otool: CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_uxo_part_two.c.o
 nm_otool: CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.o
 nm_otool: CMakeFiles/nm_otool.dir/errors.c.o
-nm_otool: CMakeFiles/nm_otool.dir/main.c.o
+nm_otool: CMakeFiles/nm_otool.dir/nm.c.o
 nm_otool: CMakeFiles/nm_otool.dir/file_inside.c.o
 nm_otool: CMakeFiles/nm_otool.dir/magic.c.o
 nm_otool: CMakeFiles/nm_otool.dir/mach_o.c.o
 nm_otool: CMakeFiles/nm_otool.dir/lst_fuctions.c.o
 nm_otool: CMakeFiles/nm_otool.dir/print_nm.c.o
 nm_otool: CMakeFiles/nm_otool.dir/fat_o.c.o
+nm_otool: CMakeFiles/nm_otool.dir/cpu_file.c.o
+nm_otool: CMakeFiles/nm_otool.dir/otool.c.o
+nm_otool: CMakeFiles/nm_otool.dir/mach_o_otool.c.o
 nm_otool: CMakeFiles/nm_otool.dir/build.make
 nm_otool: CMakeFiles/nm_otool.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Linking C executable nm_otool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Linking C executable nm_otool"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nm_otool.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

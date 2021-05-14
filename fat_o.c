@@ -51,6 +51,22 @@ size_t	len_flb(char *flb, size_t stat_size, char arch_size)
 	return (res);
 }
 
+void 	init_fat_o(size_t *i, struct fat_arch_64 **fa_64, struct fat_arch **fa_32, char *flb)
+{
+	*i = 0;
+	*fa_32 = (struct fat_arch*)(flb + 8);
+	*fa_64 = (struct fat_arch_64*)(flb + 8);
+}
+
+void	output_header(char *name, cpu_type_t cpu_type)
+{
+	write(1, "\n", 1);
+	ft_putstr(name);
+	write(1, " (for architecture ", 19);
+	ft_putstr(find_cpu(cpu_type));
+	write(1, "):\n", 3);
+}
+
 t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name)
 {
 	size_t		len;
@@ -60,4 +76,22 @@ t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name)
 
 	len = len_flb(flb, stat_size, arch_size);
 	//todo check cpu and print fat_o
+	init_fat_o(&i, &fa_64, &fa_32, flb);
+	while (len && i * (arch_size == 64 ? sizeof(*fa_64) : sizeof(*fa_32)) + 8 < stat_size)
+	{
+		if (len_flb(flb, stat_size, arch_size) > 1)
+			output_header(name, fa_32->cputype);
+		if (check_it(flb, i, arch_size))
+		{
+			if (arch_size == 64)
+				work_inside_binary(flb + fa_64->offset, fa_64->size, name);
+			else
+				work_inside_binary(flb + fa_32->offset, fa_32->size, name);
+			len -= 1;
+		}
+		i++;
+		fa_32 += 1;
+		fa_64 += 1;
+	}
+	return (NULL);
 }

@@ -4,11 +4,6 @@
 
 #include "nmotool.h"
 
-#define NSECTS_64 (int)(&((struct segment_command_64*)(0x0))->nsects)
-#define NSECTS (int)(&((struct segment_command*)(0x0))->nsects)
-#define MH_NCMDS (int)(&((struct mach_header*)(0x0))->ncmds)
-
-
 char	*check_part_segment(void *addr, size_t *j, char arch_size, char n)
 {
 	struct section_64	*sect_64;

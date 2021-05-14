@@ -6,7 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/ib/cxim/nm-otool/cpu_file.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
 /Users/ib/cxim/nm-otool/errors.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/fat_o.c
 nmotool.h
 /Users/ib/cxim/nm-otool/nmotool.h
 

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/nm_otool.dir/cpu_file.c.o"
   "CMakeFiles/nm_otool.dir/errors.c.o"
   "CMakeFiles/nm_otool.dir/fat_o.c.o"
   "CMakeFiles/nm_otool.dir/file_inside.c.o"
@@ -113,8 +114,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/ft_printf/srcs/work_with_x_big.c.o"
   "CMakeFiles/nm_otool.dir/lst_fuctions.c.o"
   "CMakeFiles/nm_otool.dir/mach_o.c.o"
+  "CMakeFiles/nm_otool.dir/mach_o_otool.c.o"
   "CMakeFiles/nm_otool.dir/magic.c.o"
-  "CMakeFiles/nm_otool.dir/main.c.o"
+  "CMakeFiles/nm_otool.dir/nm.c.o"
+  "CMakeFiles/nm_otool.dir/otool.c.o"
   "CMakeFiles/nm_otool.dir/print_nm.c.o"
   "nm_otool"
   "nm_otool.pdb"

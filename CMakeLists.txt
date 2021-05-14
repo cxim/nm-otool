@@ -120,6 +120,6 @@ add_executable(nm_otool
 		ft_printf/srcs/work_with_uxo_part_two.c
 		ft_printf/srcs/work_with_x_big.c
 		errors.c
-		main.c
+		nm.c
 		file_inside.c
-		nmotool.h magic.c mach_o.c lst_fuctions.c print_nm.c fat_o.c)
+		nmotool.h magic.c mach_o.c lst_fuctions.c print_nm.c fat_o.c cpu_file.c otool.c mach_o_otool.c)

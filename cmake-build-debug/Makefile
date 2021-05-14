@@ -123,6 +123,33 @@ nm_otool/fast:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/build
 .PHONY : nm_otool/fast
 
+cpu_file.o: cpu_file.c.o
+
+.PHONY : cpu_file.o
+
+# target to build an object file
+cpu_file.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/cpu_file.c.o
+.PHONY : cpu_file.c.o
+
+cpu_file.i: cpu_file.c.i
+
+.PHONY : cpu_file.i
+
+# target to preprocess a source file
+cpu_file.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/cpu_file.c.i
+.PHONY : cpu_file.c.i
+
+cpu_file.s: cpu_file.c.s
+
+.PHONY : cpu_file.s
+
+# target to generate assembly for a file
+cpu_file.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/cpu_file.c.s
+.PHONY : cpu_file.c.s
+
 errors.o: errors.c.o
 
 .PHONY : errors.o
@@ -3201,6 +3228,33 @@ mach_o.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o.c.s
 .PHONY : mach_o.c.s
 
+mach_o_otool.o: mach_o_otool.c.o
+
+.PHONY : mach_o_otool.o
+
+# target to build an object file
+mach_o_otool.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_otool.c.o
+.PHONY : mach_o_otool.c.o
+
+mach_o_otool.i: mach_o_otool.c.i
+
+.PHONY : mach_o_otool.i
+
+# target to preprocess a source file
+mach_o_otool.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_otool.c.i
+.PHONY : mach_o_otool.c.i
+
+mach_o_otool.s: mach_o_otool.c.s
+
+.PHONY : mach_o_otool.s
+
+# target to generate assembly for a file
+mach_o_otool.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_otool.c.s
+.PHONY : mach_o_otool.c.s
+
 magic.o: magic.c.o
 
 .PHONY : magic.o
@@ -3228,32 +3282,59 @@ magic.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/magic.c.s
 .PHONY : magic.c.s
 
-main.o: main.c.o
+nm.o: nm.c.o
 
-.PHONY : main.o
+.PHONY : nm.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/main.c.o
-.PHONY : main.c.o
+nm.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/nm.c.o
+.PHONY : nm.c.o
 
-main.i: main.c.i
+nm.i: nm.c.i
 
-.PHONY : main.i
+.PHONY : nm.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/main.c.i
-.PHONY : main.c.i
+nm.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/nm.c.i
+.PHONY : nm.c.i
 
-main.s: main.c.s
+nm.s: nm.c.s
 
-.PHONY : main.s
+.PHONY : nm.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/main.c.s
-.PHONY : main.c.s
+nm.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/nm.c.s
+.PHONY : nm.c.s
+
+otool.o: otool.c.o
+
+.PHONY : otool.o
+
+# target to build an object file
+otool.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/otool.c.o
+.PHONY : otool.c.o
+
+otool.i: otool.c.i
+
+.PHONY : otool.i
+
+# target to preprocess a source file
+otool.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/otool.c.i
+.PHONY : otool.c.i
+
+otool.s: otool.c.s
+
+.PHONY : otool.s
+
+# target to generate assembly for a file
+otool.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/otool.c.s
+.PHONY : otool.c.s
 
 print_nm.o: print_nm.c.o
 
@@ -3291,6 +3372,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... nm_otool"
+	@echo "... cpu_file.o"
+	@echo "... cpu_file.i"
+	@echo "... cpu_file.s"
 	@echo "... errors.o"
 	@echo "... errors.i"
 	@echo "... errors.s"
@@ -3633,12 +3717,18 @@ help:
 	@echo "... mach_o.o"
 	@echo "... mach_o.i"
 	@echo "... mach_o.s"
+	@echo "... mach_o_otool.o"
+	@echo "... mach_o_otool.i"
+	@echo "... mach_o_otool.s"
 	@echo "... magic.o"
 	@echo "... magic.i"
 	@echo "... magic.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... nm.o"
+	@echo "... nm.i"
+	@echo "... nm.s"
+	@echo "... otool.o"
+	@echo "... otool.i"
+	@echo "... otool.s"
 	@echo "... print_nm.o"
 	@echo "... print_nm.i"
 	@echo "... print_nm.s"

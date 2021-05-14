@@ -14,6 +14,10 @@
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
 
+#define NSECTS_64 (int)(&((struct segment_command_64*)(0x0))->nsects)
+#define NSECTS (int)(&((struct segment_command*)(0x0))->nsects)
+#define MH_NCMDS (int)(&((struct mach_header*)(0x0))->ncmds)
+
 typedef struct			s_data
 {
 	char				*name;
@@ -26,6 +30,13 @@ typedef struct			s_lst
 	t_data				data;
 	struct s_lst		*next;
 }						t_lst;
+
+typedef struct	s_sect
+{
+	uint64_t	addr;
+	uint64_t	offset;
+	uint64_t	size;
+}				t_sect;
 
 enum	errors
 {
@@ -40,6 +51,7 @@ enum	errors
 };
 
 void	errors_nm_otool(enum errors error);
+void get_info_file(char *name_file);
 void	work_inside_binary(char *flb, size_t stat_size, char *file_name);
 char *get_endian_reverse(char *flb, size_t stat_size);
 t_lst *mach_o(char *flb, size_t file_size, char size_arch, char *a_s);
@@ -49,5 +61,8 @@ t_lst	*sorting_lst(t_lst *head);
 void print_lst(t_lst *lst, char arch_size);
 void	free_lst(t_lst *lst);
 t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name);
+char		*find_cpu(cpu_type_t cpu_type);
+void	mach_o_otool(char *flb, size_t stat_size, char arch_size);
+
 
 #endif //NM_OTOOL_NMOTOOL_H
