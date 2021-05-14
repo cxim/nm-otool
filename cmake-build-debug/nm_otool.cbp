@@ -93,6 +93,9 @@
 		<Unit filename="/Users/ib/cxim/nm-otool/fat_o.c">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/fat_otool.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/file_inside.c">
 			<Option target="nm_otool"/>
 		</Unit>
@@ -451,6 +454,9 @@
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/print_nm.c">
+			<Option target="nm_otool"/>
+		</Unit>
+		<Unit filename="/Users/ib/cxim/nm-otool/print_otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/ib/cxim/nm-otool/CMakeLists.txt">

@@ -47,7 +47,7 @@ enum	errors
 	MMAP,
 	MALLOC,
 	ARCH_ERR,
-	CORR_BIN
+	CORR_FILE
 };
 
 void	errors_nm_otool(enum errors error);
@@ -63,6 +63,8 @@ void	free_lst(t_lst *lst);
 t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name);
 char		*find_cpu(cpu_type_t cpu_type);
 void	mach_o_otool(char *flb, size_t stat_size, char arch_size);
-
+void	output_mach_o_otool(char *flb, t_sect sect, char arch_size);
+void	fat_o_otool(char *flb, size_t stat_size, char arch_size, char *name);
+void	work_inside_binary_otool(char *flb, size_t stat_size, char *file_name);
 
 #endif //NM_OTOOL_NMOTOOL_H

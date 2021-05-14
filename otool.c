@@ -6,6 +6,7 @@
 
 void	work_inside_binary_otool(char *flb, size_t stat_size, char *file_name)
 {
+	file_name ="a";
 	flb = get_endian_reverse(flb, stat_size);
 	if (flb == NULL)
 		return;
@@ -14,13 +15,9 @@ void	work_inside_binary_otool(char *flb, size_t stat_size, char *file_name)
 	else if (*(unsigned int*)flb == MH_MAGIC)
 		mach_o_otool(flb, stat_size, 32);
 	else if (*(unsigned int*)flb == FAT_MAGIC_64)
-	{
-		fat_o(flb, stat_size, 64, file_name);
-	}
+		fat_o_otool(flb, stat_size, 64, file_name);
 	else if (*(unsigned int*)flb == FAT_MAGIC)
-	{
-		fat_o(flb, stat_size, 32, file_name);
-	}
+		fat_o_otool(flb, stat_size, 32, file_name);
 	else
 		errors_nm_otool(ARCH_ERR);
 }

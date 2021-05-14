@@ -108,7 +108,7 @@ void *get_symtab(char *flb, size_t file_size, char size_arch)
 	}
 	if ((void*)lc > file_size + (void*)flb)
 	{
-		errors_nm_otool(CORR_BIN);
+		errors_nm_otool(CORR_FILE);
 		return (NULL);
 	}
 	if (i == mh->ncmds)

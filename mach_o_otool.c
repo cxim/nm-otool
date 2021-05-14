@@ -64,5 +64,4 @@ void	mach_o_otool(char *flb, size_t stat_size, char arch_size)
 	if ((sect_tab = get_size_sect(flb, stat_size, arch_size, &sect)) == 0)
 		return;
 	output_mach_o_otool(flb, sect, arch_size);
-	return;
 }

@@ -4,7 +4,7 @@ NAME_OTOOL = otool
 
 SRCS_NM = nm.c errors.c file_inside.c magic.c mach_o.c lst_fuctions.c print_nm.c fat_o.c cpu_file.c
 
-SRCS_OTOOL = otool.c mach_o_otool.c
+SRCS_OTOOL = otool.c mach_o_otool.c print_otool.c errors.c magic.c mach_o.c lst_fuctions.c fat_otool.c cpu_file.c
 
 G_FLAGS = -Wall -Werror -Wextra
 OBJECTS_NM = $(SRCS_NM:.c=.o)

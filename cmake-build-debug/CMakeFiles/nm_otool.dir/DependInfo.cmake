@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ib/cxim/nm-otool/cpu_file.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/cpu_file.c.o"
   "/Users/ib/cxim/nm-otool/errors.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/errors.c.o"
   "/Users/ib/cxim/nm-otool/fat_o.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/fat_o.c.o"
+  "/Users/ib/cxim/nm-otool/fat_otool.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/fat_otool.c.o"
   "/Users/ib/cxim/nm-otool/file_inside.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/file_inside.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/includes/libft/ft_atoi.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o"
   "/Users/ib/cxim/nm-otool/ft_printf/includes/libft/ft_bzero.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_bzero.c.o"
@@ -124,6 +125,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ib/cxim/nm-otool/nm.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/nm.c.o"
   "/Users/ib/cxim/nm-otool/otool.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/otool.c.o"
   "/Users/ib/cxim/nm-otool/print_nm.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/print_nm.c.o"
+  "/Users/ib/cxim/nm-otool/print_otool.c" "/Users/ib/cxim/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/print_otool.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

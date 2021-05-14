@@ -21,6 +21,8 @@ void	errors_nm_otool(enum errors error)
 		ft_putstr_fd("cant close file\n", 2);
 	else if (error == ARCH_ERR)
 	    ft_putstr_fd("error: architecture problem\n", 2);
-	else if (error == CORR_BIN)
+	else if (error == CORR_FILE)
 		ft_putstr_fd("file corrupted\n", 2);
+	else if (error == MALLOC)
+		ft_putstr_fd("Malloc error\n", 2);
 }

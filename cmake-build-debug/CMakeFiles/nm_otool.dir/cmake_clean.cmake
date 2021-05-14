@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/cpu_file.c.o"
   "CMakeFiles/nm_otool.dir/errors.c.o"
   "CMakeFiles/nm_otool.dir/fat_o.c.o"
+  "CMakeFiles/nm_otool.dir/fat_otool.c.o"
   "CMakeFiles/nm_otool.dir/file_inside.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o"
   "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_bzero.c.o"
@@ -119,6 +120,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/nm.c.o"
   "CMakeFiles/nm_otool.dir/otool.c.o"
   "CMakeFiles/nm_otool.dir/print_nm.c.o"
+  "CMakeFiles/nm_otool.dir/print_otool.c.o"
   "nm_otool"
   "nm_otool.pdb"
 )

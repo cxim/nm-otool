@@ -1,10 +1,10 @@
 //
-// Created by И Б on 12.05.2021.
+// Created by И Б on 14.05.2021.
 //
 
 #include "nmotool.h"
 
-int		check_it(char *flb, size_t i, char arch_size)
+int		check_it_otool(char *flb, size_t i, char arch_size)
 {
 	unsigned int	cpu;
 	size_t			iter;
@@ -18,7 +18,7 @@ int		check_it(char *flb, size_t i, char arch_size)
 			if (*(unsigned int*)(flb + 8 + (iter * (arch_size == 64 ? 24 : 20))) == cpu)
 				return (0);
 			if (*(unsigned int*)(flb + 8 + (iter * (arch_size == 64 ? 24 : 20))) ==
-					(cpu | 0x01000000))
+				(cpu | 0x01000000))
 				return (0);
 			if ((*(unsigned int*)(flb + 8 + (iter * (arch_size == 64 ? 24 : 20))) | 0x01000000) == cpu)
 				return (1);
@@ -28,7 +28,7 @@ int		check_it(char *flb, size_t i, char arch_size)
 	return (iter);
 }
 
-size_t	len_flb(char *flb, size_t stat_size, char arch_size)
+size_t	len_flb_otool(char *flb, size_t stat_size, char arch_size)
 {
 	size_t	len;
 	size_t	res;
@@ -44,21 +44,21 @@ size_t	len_flb(char *flb, size_t stat_size, char arch_size)
 	while (i < len && i * (arch_size == 64 ? sizeof(*fa_64) :
 						   sizeof(*fa_32)) + 8 < stat_size)
 	{
-		if (check_it(flb, i, arch_size))
+		if (check_it_otool(flb, i, arch_size))
 			res++;
 		i++;
 	}
 	return (res);
 }
 
-void 	init_fat_o(size_t *i, struct fat_arch_64 **fa_64, struct fat_arch **fa_32, char *flb)
+void 	init_fat_o_otool(size_t *i, struct fat_arch_64 **fa_64, struct fat_arch **fa_32, char *flb)
 {
 	*i = 0;
 	*fa_32 = (struct fat_arch*)(flb + 8);
 	*fa_64 = (struct fat_arch_64*)(flb + 8);
 }
 
-void	output_header(char *name, cpu_type_t cpu_type)
+void	output_header_otool(char *name, cpu_type_t cpu_type)
 {
 	write(1, "\n", 1);
 	ft_putstr(name);
@@ -67,30 +67,29 @@ void	output_header(char *name, cpu_type_t cpu_type)
 	write(1, "):\n", 3);
 }
 
-t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name)
+void	fat_o_otool(char *flb, size_t stat_size, char arch_size, char *name)
 {
 	size_t		len;
 	size_t		i;
 	struct fat_arch		*fa_32;
 	struct fat_arch_64		*fa_64;
 
-	len = len_flb(flb, stat_size, arch_size);
-	init_fat_o(&i, &fa_64, &fa_32, flb);
+	len = len_flb_otool(flb, stat_size, arch_size);
+	init_fat_o_otool(&i, &fa_64, &fa_32, flb);
 	while (len && i * (arch_size == 64 ? sizeof(*fa_64) : sizeof(*fa_32)) + 8 < stat_size)
 	{
-		if (len_flb(flb, stat_size, arch_size) > 1)
-			output_header(name, fa_32->cputype);
-		if (check_it(flb, i, arch_size))
+		if (len_flb_otool(flb, stat_size, arch_size) > 1)
+			output_header_otool(name, fa_32->cputype);
+		if (check_it_otool(flb, i, arch_size))
 		{
 			if (arch_size == 64)
-				work_inside_binary(flb + fa_64->offset, fa_64->size, name);
+				work_inside_binary_otool(flb + fa_64->offset, fa_64->size, name);
 			else
-				work_inside_binary(flb + fa_32->offset, fa_32->size, name);
+				work_inside_binary_otool(flb + fa_32->offset, fa_32->size, name);
 			len -= 1;
 		}
 		i++;
 		fa_32 += 1;
 		fa_64 += 1;
 	}
-	return (NULL);
 }
