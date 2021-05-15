@@ -66,5 +66,11 @@ void	mach_o_otool(char *flb, size_t stat_size, char arch_size);
 void	output_mach_o_otool(char *flb, t_sect sect, char arch_size);
 void	fat_o_otool(char *flb, size_t stat_size, char arch_size, char *name);
 void	work_inside_binary_otool(char *flb, size_t stat_size, char *file_name);
+t_lst	*mach_o_64(char *flb, size_t file_size, char size_arch, char *ar);
+char	*check_part_segment_64(void *addr, size_t *j, char n);
+t_lst	*mach_o_32(char *flb, size_t file_size, char size_arch, char *ar);
+void	*get_symtab_32(char *flb, size_t file_size);
+void	*get_symtab_64(char *flb, size_t file_size);
+char	*check_part_segment(void *addr, size_t *j, char n);
 
 #endif //NM_OTOOL_NMOTOOL_H

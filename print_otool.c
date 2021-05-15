@@ -1,10 +1,4 @@
-//
-// Created by И Б on 14.05.2021.
-//
-
 #include "nmotool.h"
-
-
 
 void	hex_output(char c)
 {
@@ -20,7 +14,7 @@ void	hex_output(char c)
 	}
 }
 
-void print_addr_otool(u_int64_t address)
+void	print_addr_otool(u_int64_t address)
 {
 	uint64_t	num;
 
@@ -34,26 +28,34 @@ void print_addr_otool(u_int64_t address)
 	}
 }
 
-void output_content(char *flb, uint64_t sector, uint64_t max)
+void	output_content(char *flb, uint64_t sector, uint64_t max)
 {
-	uint64_t 	i;
+	uint64_t	i;
 
 	i = 0;
 	while (i < 16 && sector + i < max)
 	{
-		if ((*(char*)(sector + i + flb) & 0xff) < 16)
+		if ((*(char *)(sector + i + flb) & 0xff) < 16)
 			write(1, "0", 1);
-		print_addr_otool(*(char*)(sector + i + flb) & 0xff);
+		print_addr_otool(*(char *)(sector + i + flb) & 0xff);
 		write(1, " ", 1);
 		i++;
 	}
+}
+
+void	out_mach_o_tool_p_two(char arch_size, char c)
+{
+	if (arch_size == 64)
+		write(1, "0000000000000000", 15 - c);
+	else
+		write(1, "0000000000000000", 7 - c);
 }
 
 void	output_mach_o_otool(char *flb, t_sect sect, char arch_size)
 {
 	uint64_t	i;
 	uint64_t	j;
-	char 		c;
+	char		c;
 
 	i = 0;
 	write(1, "(__TEXT,__text) section\n", 24);
@@ -66,7 +68,7 @@ void	output_mach_o_otool(char *flb, t_sect sect, char arch_size)
 			j /= 16;
 			c++;
 		}
-		write(1, "0000000000000000", arch_size == 64 ? 15 - c : 7 - c);
+		out_mach_o_tool_p_two(arch_size, c);
 		print_addr_otool(i + sect.addr);
 		write(1, " ", 1);
 		output_content(flb, i + sect.offset, sect.size + sect.offset);

@@ -1,7 +1,3 @@
-//
-// Created by И Б on 12.05.2021.
-//
-
 #include "nmotool.h"
 
 /*
@@ -39,7 +35,7 @@ char	*find_cpu_part_two(cpu_type_t cpu_type)
 		return ("unknown cpu_type");
 }
 
-char		*find_cpu(cpu_type_t cpu_type)
+char	*find_cpu(cpu_type_t cpu_type)
 {
 	if (cpu_type == CPU_TYPE_MC680x0)
 		return ("mc680");

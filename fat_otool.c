@@ -1,7 +1,3 @@
-//
-// Created by И Б on 14.05.2021.
-//
-
 #include "nmotool.h"
 
 int		check_it_otool(char *flb, size_t i, char arch_size)

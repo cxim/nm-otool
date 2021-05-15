@@ -1,7 +1,3 @@
-//
-// Created by И Б on 09.05.2021.
-//
-
 #include "nmotool.h"
 
 void	free_lst(t_lst *lst)
@@ -16,7 +12,7 @@ void	free_lst(t_lst *lst)
 	}
 }
 
-int		is_sorted(t_lst *lst)
+int	is_sorted(t_lst *lst)
 {
 	while (lst && lst->next)
 	{
@@ -53,9 +49,11 @@ void	new_elem_lst(t_lst **head, char *name, char type, size_t offset)
 {
 	t_lst	*tmp;
 
-	if (!(tmp = *head))
+	tmp = *head;
+	if (!tmp)
 	{
-		if (!(*head = malloc(sizeof(t_lst))))
+		*head = malloc(sizeof(t_lst));
+		if (!*head)
 			errors_nm_otool(MALLOC);
 		(*head)->data.name = name;
 		(*head)->data.type = type;
@@ -65,11 +63,11 @@ void	new_elem_lst(t_lst **head, char *name, char type, size_t offset)
 	}
 	while (tmp->next)
 		tmp = tmp->next;
-	if (!(tmp->next = malloc(sizeof(t_lst))))
+	tmp->next = malloc(sizeof(t_lst));
+	if (!tmp->next)
 		errors_nm_otool(MALLOC);
 	tmp->next->data.name = name;
 	tmp->next->data.type = type;
 	tmp->next->data.offset = offset;
 	tmp->next->next = NULL;
-	return ;
 }

@@ -1,33 +1,6 @@
-//
-// Created by Merrett Narwhal on 5/9/21.
-//
-
 #include "nmotool.h"
 
-char	*check_part_segment(void *addr, size_t *j, char arch_size, char n)
-{
-	struct section_64	*sect_64;
-	struct section		*sect_32;
-	size_t				i;
-
-	i = 0;
-	sect_32 = (void*)(addr + (arch_size == 64 ? sizeof(struct segment_command_64) :
-							  sizeof(struct segment_command)));
-	sect_64 = (void*)sect_32;
-	while (i < *((unsigned int*)((void*)addr +
-								 (arch_size == 64 ? NSECTS_64 : NSECTS))))
-	{
-		if (n == (char)*j)
-			return (arch_size == 64 ? sect_64->sectname : sect_32->sectname);
-		sect_32 += 1;
-		sect_64 += 1;
-		i += 1;
-		*j += 1;
-	}
-	return (NULL);
-}
-
-char	*get_sect_tab(char *flb, size_t file_size, char arch_size, char n)
+char	*get_sect_tab(char *flb, size_t file_size, char n)
 {
 	struct load_command		*lc;
 	unsigned int			index;
@@ -36,27 +9,29 @@ char	*get_sect_tab(char *flb, size_t file_size, char arch_size, char n)
 	size_t					j;
 
 	index = 0;
+	i = 0;
 	j = 1;
-	lc = (void*)flb + (arch_size == 32 ? sizeof(struct mach_header) :
-					   sizeof(struct mach_header_64));
-	while (index++ < *((unsigned int*)(flb + MH_NCMDS)) &&
-		   (void*)lc < file_size + (void*)flb)
+	lc = (void *)flb + sizeof(struct mach_header);
+	while (index++ < *((unsigned int *)(flb + MH_NCMDS)) && \
+		   (void *)lc < file_size + (void *)flb)
 	{
-		if (lc->cmd == (arch_size == 64 ? LC_SEGMENT_64 : LC_SEGMENT) && !(i = 0))
+		if (lc->cmd == LC_SEGMENT)
 		{
-			if ((rslt = check_part_segment((void*)lc, &j, arch_size, n)))
+			rslt = check_part_segment((void *)lc, &j, n);
+			if (rslt)
 				return (rslt);
 		}
-		lc = (void*)lc + lc->cmdsize;
+		lc = (void *)lc + lc->cmdsize;
 	}
 	return (NULL);
 }
 
-char	type_part_two(char *flb, size_t file_size, char arch_size, char n)
+char	type_part_two(char *flb, size_t file_size, char n)
 {
-	char *str;
+	char	*str;
 
-	if ((str = get_sect_tab(flb, file_size, arch_size, n)) == NULL)
+	str = get_sect_tab(flb, file_size, n);
+	if (str == NULL)
 		return ('S');
 	if (ft_strcmp(str, "__text") == 0)
 		return ('T');
@@ -67,10 +42,10 @@ char	type_part_two(char *flb, size_t file_size, char arch_size, char n)
 	return ('S');
 }
 
-char 	type(uint16_t section, char *flb, size_t file_size, char arch_size)
+char 	type(uint16_t section, char *flb, size_t file_size)
 {
-	uint8_t sec;
-	uint8_t type_section;
+	uint8_t	sec;
+	uint8_t	type_section;
 	char	ret;
 
 	type_section = section;
@@ -78,71 +53,67 @@ char 	type(uint16_t section, char *flb, size_t file_size, char arch_size)
 	if ((type_section & N_TYPE) == N_UNDF && sec == 0)
 		ret = 'U';
 	else if ((type_section & N_TYPE) == N_SECT)
-		ret = type_part_two(flb, file_size, arch_size, sec);
+		ret = type_part_two(flb, file_size, sec);
 	else if ((type_section & N_TYPE) == N_ABS)
 		ret = 'A';
 	else if ((type_section & N_TYPE) == N_INDR)
 		ret = 'I';
 	else
 		return ('?');
-	return ((type_section & N_EXT) ? ret : ret + 32);
+	if (type_section & N_EXT)
+		return (ret);
+	else
+		return (ret + 32);
 }
 
-void *get_symtab(char *flb, size_t file_size, char size_arch)
+void	*get_symtab_32(char *flb, size_t file_size)
 {
-	size_t		i;
+	size_t					i;
 	struct load_command		*lc;
 	struct mach_header		*mh;
 
-	mh = (struct mach_header*)flb;
+	mh = (struct mach_header *)flb;
 	i = 0;
-
-	lc = (void*)flb + (size_arch == 32 ? sizeof(struct mach_header) :
-					   sizeof(struct mach_header_64));
-	while (i < mh->ncmds && (void*)lc < file_size + (void*)flb)
+	lc = (void *)flb + sizeof(struct mach_header);
+	while (i < mh->ncmds && (void *)lc < file_size + (void *)flb)
 	{
 		if (lc->cmd == LC_SYMTAB)
-			break;
-		lc = (void*)lc + lc->cmdsize;
+			break ;
+		lc = (void *)lc + lc->cmdsize;
 		i++;
 	}
-	if ((void*)lc > file_size + (void*)flb)
+	if ((void *)lc > file_size + (void *)flb)
 	{
 		errors_nm_otool(CORR_FILE);
 		return (NULL);
 	}
 	if (i == mh->ncmds)
 		return (NULL);
-	return ((void*)lc);
+	return ((void *)lc);
 }
 
-t_lst *mach_o(char *flb, size_t file_size, char size_arch, char *ar)
+t_lst	*mach_o_32(char *flb, size_t file_size, char size_arch, char *ar)
 {
-	t_lst *list;
+	t_lst					*list;
 	struct symtab_command	*sc;
-	struct nlist_64			*nl64;
 	struct nlist			*nl;
 	size_t					i;
 
-	if ((sc = (struct symtab_command*)get_symtab(flb, file_size, size_arch)) == NULL)
+	sc = (struct symtab_command *)get_symtab_32(flb, file_size);
+	if (sc == NULL)
 		return (NULL);
 	i = -1;
 	list = NULL;
-	nl = (void*)flb + sc->symoff;
-	nl64 = (void*)flb + sc->symoff;
+	nl = (void *)flb + sc->symoff;
 	*ar = size_arch;
 	while (++i < sc->nsyms)
-		if (size_arch == 64 && (nl64[i].n_type == 1 || nl64[i].n_type == 14
-								|| nl64[i].n_type == 15 || nl64[i].n_type == 0
-								|| nl64[i].n_type == 3 || nl64[i].n_type == 30))
-			new_elem_lst(&list, (void*)flb + sc->stroff + nl64[i].n_un.n_strx,
-					 type((uint16_t)((nl64[i].n_sect << 8) | nl64[i].n_type),
-					 		flb, file_size, size_arch), nl64[i].n_value);
-		else if (size_arch == 32 && (nl[i].n_type == 1 || nl[i].n_type == 14
-								|| nl[i].n_type == 15 || nl[i].n_type == 0
-								|| nl[i].n_type == 3 || nl[i].n_type == 30))
-			new_elem_lst(&list, (void*)flb + sc->stroff + nl[i].n_un.n_strx,
-					 type((uint16_t)((nl[i].n_sect << 8) | nl[i].n_type),
-					 		flb, file_size, size_arch), nl[i].n_value);
-	return list;
+	{
+		if (size_arch == 32 && (nl[i].n_type == 1 || nl[i].n_type == 14 || \
+			nl[i].n_type == 15 || nl[i].n_type == 0 || nl[i].n_type == 3 || \
+			nl[i].n_type == 30))
+			new_elem_lst(&list, (void *) flb + sc->stroff + \
+				nl[i].n_un.n_strx, type((uint16_t)((nl[i].n_sect << 8) | \
+				nl[i].n_type), flb, file_size), nl[i].n_value);
+	}
+	return (list);
 }

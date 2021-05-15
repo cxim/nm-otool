@@ -1,14 +1,7 @@
-//
-// Created by И Б on 10.05.2021.
-//
-
 #include "nmotool.h"
 
 void	hex_output(char c)
 {
-	char res;
-
-	res = c + '0';
 	if (c < 10)
 	{
 		c += 48;
@@ -21,7 +14,7 @@ void	hex_output(char c)
 	}
 }
 
-void print_addr(void *address)
+void	print_addr(void *address)
 {
 	long	num;
 
@@ -30,15 +23,23 @@ void print_addr(void *address)
 		hex_output(num);
 	else if (num > 9)
 	{
-		print_addr((void*)(num / 16));
-		print_addr((void*)(num % 16));
+		print_addr((void *)(num / 16));
+		print_addr((void *)(num % 16));
 	}
 }
 
-void print_o(size_t offset, char arch_size)
+void	out_mach_nm_p_two(char arch_size, char c)
 {
-	int 	i;
-	size_t 	s;
+	if (arch_size == 64)
+		write(1, "0000000000000000", 15 - c);
+	else
+		write(1, "0000000000000000", 7 - c);
+}
+
+void	print_o(size_t offset, char arch_size)
+{
+	int		i;
+	size_t	s;
 
 	i = 0;
 	s = offset;
@@ -47,16 +48,21 @@ void print_o(size_t offset, char arch_size)
 		offset = offset / 16;
 		i++;
 	}
-	write(1, "0000000000000000", arch_size == 64 ? 15 - i : 7 - i);
-	print_addr((void*)s);
+	out_mach_nm_p_two(arch_size, i);
+	print_addr((void *)s);
 }
 
-void print_lst(t_lst *lst, char arch_size)
+void	print_lst(t_lst *lst, char arch_size)
 {
 	while (lst)
 	{
 		if (lst->data.type == 'U' || lst->data.type == 'u')
-			write(1, "                ", arch_size == 32 ? 8 : 16);
+		{
+			if (arch_size == 32)
+				write(1, "                ", 8);
+			else
+				write(1, "                ", 16);
+		}
 		else
 			print_o(lst->data.offset, arch_size);
 		write(1, " ", 1);
