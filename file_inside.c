@@ -21,14 +21,14 @@ void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 	arch_size = '\0';
 	flb = get_endian_reverse(flb, stat_size);
 	list = work_ins_bin_p_two(flb, stat_size, &arch_size, list);
-	if (list)
-		;
-	else if (*(unsigned int *)flb == FAT_MAGIC_64)
+	if (!list && !flb)
+		return ;
+	else if (!list && *(unsigned int *)flb == FAT_MAGIC_64)
 	{
 		list = fat_o(flb, stat_size, 64, file_name);
 		arch_size = 64;
 	}
-	else if (*(unsigned int *)flb == FAT_MAGIC)
+	else if (!list && *(unsigned int *)flb == FAT_MAGIC)
 	{
 		list = fat_o(flb, stat_size, 32, file_name);
 		arch_size = 32;
