@@ -1636,6 +1636,84 @@ CMakeFiles/nm_otool.dir/mach_o_32_64.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/mach_o_32_64.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/mach_o_32_64.c -o CMakeFiles/nm_otool.dir/mach_o_32_64.c.s
 
+CMakeFiles/nm_otool.dir/otool.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/otool.c.o: ../otool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/nm_otool.dir/otool.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/otool.c.o -c /Users/mnarwhal/Desktop/nm-otool/otool.c
+
+CMakeFiles/nm_otool.dir/otool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/otool.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mnarwhal/Desktop/nm-otool/otool.c > CMakeFiles/nm_otool.dir/otool.c.i
+
+CMakeFiles/nm_otool.dir/otool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/otool.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/otool.c -o CMakeFiles/nm_otool.dir/otool.c.s
+
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: ../mach_o_otool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/nm_otool.dir/mach_o_otool.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/mach_o_otool.c.o -c /Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c
+
+CMakeFiles/nm_otool.dir/mach_o_otool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/mach_o_otool.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c > CMakeFiles/nm_otool.dir/mach_o_otool.c.i
+
+CMakeFiles/nm_otool.dir/mach_o_otool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/mach_o_otool.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c -o CMakeFiles/nm_otool.dir/mach_o_otool.c.s
+
+CMakeFiles/nm_otool.dir/fat_otool.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/fat_otool.c.o: ../fat_otool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/nm_otool.dir/fat_otool.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/fat_otool.c.o -c /Users/mnarwhal/Desktop/nm-otool/fat_otool.c
+
+CMakeFiles/nm_otool.dir/fat_otool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/fat_otool.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mnarwhal/Desktop/nm-otool/fat_otool.c > CMakeFiles/nm_otool.dir/fat_otool.c.i
+
+CMakeFiles/nm_otool.dir/fat_otool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/fat_otool.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/fat_otool.c -o CMakeFiles/nm_otool.dir/fat_otool.c.s
+
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o: ../fat_otool_64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/nm_otool.dir/fat_otool_64.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/fat_otool_64.c.o -c /Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c
+
+CMakeFiles/nm_otool.dir/fat_otool_64.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/fat_otool_64.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c > CMakeFiles/nm_otool.dir/fat_otool_64.c.i
+
+CMakeFiles/nm_otool.dir/fat_otool_64.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/fat_otool_64.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c -o CMakeFiles/nm_otool.dir/fat_otool_64.c.s
+
+CMakeFiles/nm_otool.dir/print_otool.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/print_otool.c.o: ../print_otool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/nm_otool.dir/print_otool.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/print_otool.c.o -c /Users/mnarwhal/Desktop/nm-otool/print_otool.c
+
+CMakeFiles/nm_otool.dir/print_otool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/print_otool.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mnarwhal/Desktop/nm-otool/print_otool.c > CMakeFiles/nm_otool.dir/print_otool.c.i
+
+CMakeFiles/nm_otool.dir/print_otool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/print_otool.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/print_otool.c -o CMakeFiles/nm_otool.dir/print_otool.c.s
+
+CMakeFiles/nm_otool.dir/fat_o_64.c.o: CMakeFiles/nm_otool.dir/flags.make
+CMakeFiles/nm_otool.dir/fat_o_64.c.o: ../fat_o_64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/nm_otool.dir/fat_o_64.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nm_otool.dir/fat_o_64.c.o -c /Users/mnarwhal/Desktop/nm-otool/fat_o_64.c
+
+CMakeFiles/nm_otool.dir/fat_o_64.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nm_otool.dir/fat_o_64.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mnarwhal/Desktop/nm-otool/fat_o_64.c > CMakeFiles/nm_otool.dir/fat_o_64.c.i
+
+CMakeFiles/nm_otool.dir/fat_o_64.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nm_otool.dir/fat_o_64.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mnarwhal/Desktop/nm-otool/fat_o_64.c -o CMakeFiles/nm_otool.dir/fat_o_64.c.s
+
 # Object files for target nm_otool
 nm_otool_OBJECTS = \
 "CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o" \
@@ -1757,7 +1835,13 @@ nm_otool_OBJECTS = \
 "CMakeFiles/nm_otool.dir/fat_o.c.o" \
 "CMakeFiles/nm_otool.dir/cpu_file.c.o" \
 "CMakeFiles/nm_otool.dir/mach_o_64.c.o" \
-"CMakeFiles/nm_otool.dir/mach_o_32_64.c.o"
+"CMakeFiles/nm_otool.dir/mach_o_32_64.c.o" \
+"CMakeFiles/nm_otool.dir/otool.c.o" \
+"CMakeFiles/nm_otool.dir/mach_o_otool.c.o" \
+"CMakeFiles/nm_otool.dir/fat_otool.c.o" \
+"CMakeFiles/nm_otool.dir/fat_otool_64.c.o" \
+"CMakeFiles/nm_otool.dir/print_otool.c.o" \
+"CMakeFiles/nm_otool.dir/fat_o_64.c.o"
 
 # External object files for target nm_otool
 nm_otool_EXTERNAL_OBJECTS =
@@ -1882,9 +1966,15 @@ nm_otool: CMakeFiles/nm_otool.dir/fat_o.c.o
 nm_otool: CMakeFiles/nm_otool.dir/cpu_file.c.o
 nm_otool: CMakeFiles/nm_otool.dir/mach_o_64.c.o
 nm_otool: CMakeFiles/nm_otool.dir/mach_o_32_64.c.o
+nm_otool: CMakeFiles/nm_otool.dir/otool.c.o
+nm_otool: CMakeFiles/nm_otool.dir/mach_o_otool.c.o
+nm_otool: CMakeFiles/nm_otool.dir/fat_otool.c.o
+nm_otool: CMakeFiles/nm_otool.dir/fat_otool_64.c.o
+nm_otool: CMakeFiles/nm_otool.dir/print_otool.c.o
+nm_otool: CMakeFiles/nm_otool.dir/fat_o_64.c.o
 nm_otool: CMakeFiles/nm_otool.dir/build.make
 nm_otool: CMakeFiles/nm_otool.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Linking C executable nm_otool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Linking C executable nm_otool"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nm_otool.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

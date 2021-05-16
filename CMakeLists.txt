@@ -122,4 +122,5 @@ add_executable(nm_otool
 		errors.c
 		nm.c
 		file_inside.c
-		nmotool.h magic.c mach_o.c lst_fuctions.c print_nm.c fat_o.c cpu_file.c mach_o_64.c mach_o_32_64.c)
+		nmotool.h magic.c mach_o.c lst_fuctions.c print_nm.c fat_o.c cpu_file.c mach_o_64.c mach_o_32_64.c
+		otool.c mach_o_otool.c fat_otool.c fat_otool_64.c print_otool.c fat_o_64.c)

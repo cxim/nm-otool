@@ -25,12 +25,12 @@ void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 		return ;
 	else if (!list && *(unsigned int *)flb == FAT_MAGIC_64)
 	{
-		list = fat_o(flb, stat_size, 64, file_name);
+		list = fat_o_64(flb, stat_size, 64, file_name);
 		arch_size = 64;
 	}
 	else if (!list && *(unsigned int *)flb == FAT_MAGIC)
 	{
-		list = fat_o(flb, stat_size, 32, file_name);
+		list = fat_o_32(flb, stat_size, 32, file_name);
 		arch_size = 32;
 	}
 	else

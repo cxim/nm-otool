@@ -10,7 +10,8 @@ char	*get_sect_tab_64(char *flb, size_t file_size, char n)
 	index = 0;
 	j = 1;
 	lc = (void *)flb + sizeof(struct mach_header_64);
-	while (index++ < *((unsigned int *)(flb + MH_NCMDS)) && \
+	while (index++ < *((unsigned int *)(flb + \
+		(int)(&((struct mach_header *)(0x0))->ncmds))) && \
 		   (void *)lc < file_size + (void *)flb)
 	{
 		if (lc->cmd == LC_SEGMENT_64)

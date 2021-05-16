@@ -7,7 +7,8 @@ char	*check_part_segment_64(void *addr, size_t *j, char n)
 
 	i = 0;
 	sect_64 = (void *)(addr + sizeof(struct segment_command_64));
-	while (i < *((unsigned int *)((void *)addr + NSECTS_64)))
+	while (i < *((unsigned int *)((void *)addr + \
+		(int)(&((struct segment_command_64 *)(0x0))->nsects))))
 	{
 		if (n == (char)*j)
 			return (sect_64->sectname);
@@ -25,7 +26,8 @@ char	*check_part_segment(void *addr, size_t *j, char n)
 
 	i = 0;
 	sect_32 = (void *)(addr + sizeof(struct segment_command));
-	while (i < *((unsigned int *)((void *)addr + NSECTS)))
+	while (i < *((unsigned int *)((void *)addr + \
+		(int)(&((struct segment_command *)(0x0))->nsects))))
 	{
 		if (n == (char)*j)
 			return (sect_32->sectname);

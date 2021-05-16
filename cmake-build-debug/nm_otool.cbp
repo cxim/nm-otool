@@ -93,6 +93,15 @@
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/fat_o.c">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/fat_o_64.c">
+			<Option target="nm_otool"/>
+		</Unit>
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/fat_otool.c">
+			<Option target="nm_otool"/>
+		</Unit>
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/file_inside.c">
 			<Option target="nm_otool"/>
 		</Unit>
@@ -441,6 +450,9 @@
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/mach_o_64.c">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/magic.c">
 			<Option target="nm_otool"/>
 		</Unit>
@@ -450,7 +462,13 @@
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/nmotool.h">
 			<Option target="nm_otool"/>
 		</Unit>
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/otool.c">
+			<Option target="nm_otool"/>
+		</Unit>
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/print_nm.c">
+			<Option target="nm_otool"/>
+		</Unit>
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/print_otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
 		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/CMakeLists.txt">

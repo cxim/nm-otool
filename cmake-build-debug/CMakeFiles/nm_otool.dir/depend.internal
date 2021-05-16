@@ -16,6 +16,16 @@ CMakeFiles/nm_otool.dir/fat_o.c.o
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
  /Users/mnarwhal/Desktop/nm-otool/nmotool.h
+CMakeFiles/nm_otool.dir/fat_otool.c.o
+ /Users/mnarwhal/Desktop/nm-otool/fat_otool.c
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
+ /Users/mnarwhal/Desktop/nm-otool/nmotool.h
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o
+ /Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
+ /Users/mnarwhal/Desktop/nm-otool/nmotool.h
 CMakeFiles/nm_otool.dir/file_inside.c.o
  /Users/mnarwhal/Desktop/nm-otool/file_inside.c
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
@@ -398,6 +408,11 @@ CMakeFiles/nm_otool.dir/mach_o_64.c.o
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
  /Users/mnarwhal/Desktop/nm-otool/mach_o_64.c
  /Users/mnarwhal/Desktop/nm-otool/nmotool.h
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
+ /Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c
+ /Users/mnarwhal/Desktop/nm-otool/nmotool.h
 CMakeFiles/nm_otool.dir/magic.c.o
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
@@ -408,8 +423,18 @@ CMakeFiles/nm_otool.dir/nm.c.o
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
  /Users/mnarwhal/Desktop/nm-otool/nm.c
  /Users/mnarwhal/Desktop/nm-otool/nmotool.h
+CMakeFiles/nm_otool.dir/otool.c.o
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
+ /Users/mnarwhal/Desktop/nm-otool/nmotool.h
+ /Users/mnarwhal/Desktop/nm-otool/otool.c
 CMakeFiles/nm_otool.dir/print_nm.c.o
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
  /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
  /Users/mnarwhal/Desktop/nm-otool/nmotool.h
  /Users/mnarwhal/Desktop/nm-otool/print_nm.c
+CMakeFiles/nm_otool.dir/print_otool.c.o
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/libft.h
+ /Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/printf.h
+ /Users/mnarwhal/Desktop/nm-otool/nmotool.h
+ /Users/mnarwhal/Desktop/nm-otool/print_otool.c

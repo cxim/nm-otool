@@ -16,6 +16,16 @@ CMakeFiles/nm_otool.dir/fat_o.c.o: ../ft_printf/includes/libft/libft.h
 CMakeFiles/nm_otool.dir/fat_o.c.o: ../ft_printf/includes/printf.h
 CMakeFiles/nm_otool.dir/fat_o.c.o: ../nmotool.h
 
+CMakeFiles/nm_otool.dir/fat_otool.c.o: ../fat_otool.c
+CMakeFiles/nm_otool.dir/fat_otool.c.o: ../ft_printf/includes/libft/libft.h
+CMakeFiles/nm_otool.dir/fat_otool.c.o: ../ft_printf/includes/printf.h
+CMakeFiles/nm_otool.dir/fat_otool.c.o: ../nmotool.h
+
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o: ../fat_otool_64.c
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o: ../ft_printf/includes/libft/libft.h
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o: ../ft_printf/includes/printf.h
+CMakeFiles/nm_otool.dir/fat_otool_64.c.o: ../nmotool.h
+
 CMakeFiles/nm_otool.dir/file_inside.c.o: ../file_inside.c
 CMakeFiles/nm_otool.dir/file_inside.c.o: ../ft_printf/includes/libft/libft.h
 CMakeFiles/nm_otool.dir/file_inside.c.o: ../ft_printf/includes/printf.h
@@ -398,6 +408,11 @@ CMakeFiles/nm_otool.dir/mach_o_64.c.o: ../ft_printf/includes/printf.h
 CMakeFiles/nm_otool.dir/mach_o_64.c.o: ../mach_o_64.c
 CMakeFiles/nm_otool.dir/mach_o_64.c.o: ../nmotool.h
 
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: ../ft_printf/includes/libft/libft.h
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: ../ft_printf/includes/printf.h
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: ../mach_o_otool.c
+CMakeFiles/nm_otool.dir/mach_o_otool.c.o: ../nmotool.h
+
 CMakeFiles/nm_otool.dir/magic.c.o: ../ft_printf/includes/libft/libft.h
 CMakeFiles/nm_otool.dir/magic.c.o: ../ft_printf/includes/printf.h
 CMakeFiles/nm_otool.dir/magic.c.o: ../magic.c
@@ -408,8 +423,18 @@ CMakeFiles/nm_otool.dir/nm.c.o: ../ft_printf/includes/printf.h
 CMakeFiles/nm_otool.dir/nm.c.o: ../nm.c
 CMakeFiles/nm_otool.dir/nm.c.o: ../nmotool.h
 
+CMakeFiles/nm_otool.dir/otool.c.o: ../ft_printf/includes/libft/libft.h
+CMakeFiles/nm_otool.dir/otool.c.o: ../ft_printf/includes/printf.h
+CMakeFiles/nm_otool.dir/otool.c.o: ../nmotool.h
+CMakeFiles/nm_otool.dir/otool.c.o: ../otool.c
+
 CMakeFiles/nm_otool.dir/print_nm.c.o: ../ft_printf/includes/libft/libft.h
 CMakeFiles/nm_otool.dir/print_nm.c.o: ../ft_printf/includes/printf.h
 CMakeFiles/nm_otool.dir/print_nm.c.o: ../nmotool.h
 CMakeFiles/nm_otool.dir/print_nm.c.o: ../print_nm.c
+
+CMakeFiles/nm_otool.dir/print_otool.c.o: ../ft_printf/includes/libft/libft.h
+CMakeFiles/nm_otool.dir/print_otool.c.o: ../ft_printf/includes/printf.h
+CMakeFiles/nm_otool.dir/print_otool.c.o: ../nmotool.h
+CMakeFiles/nm_otool.dir/print_otool.c.o: ../print_otool.c
 

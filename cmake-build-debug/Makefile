@@ -223,6 +223,87 @@ fat_o.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o.c.s
 .PHONY : fat_o.c.s
 
+fat_o_64.o: fat_o_64.c.o
+
+.PHONY : fat_o_64.o
+
+# target to build an object file
+fat_o_64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o_64.c.o
+.PHONY : fat_o_64.c.o
+
+fat_o_64.i: fat_o_64.c.i
+
+.PHONY : fat_o_64.i
+
+# target to preprocess a source file
+fat_o_64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o_64.c.i
+.PHONY : fat_o_64.c.i
+
+fat_o_64.s: fat_o_64.c.s
+
+.PHONY : fat_o_64.s
+
+# target to generate assembly for a file
+fat_o_64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_o_64.c.s
+.PHONY : fat_o_64.c.s
+
+fat_otool.o: fat_otool.c.o
+
+.PHONY : fat_otool.o
+
+# target to build an object file
+fat_otool.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_otool.c.o
+.PHONY : fat_otool.c.o
+
+fat_otool.i: fat_otool.c.i
+
+.PHONY : fat_otool.i
+
+# target to preprocess a source file
+fat_otool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_otool.c.i
+.PHONY : fat_otool.c.i
+
+fat_otool.s: fat_otool.c.s
+
+.PHONY : fat_otool.s
+
+# target to generate assembly for a file
+fat_otool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_otool.c.s
+.PHONY : fat_otool.c.s
+
+fat_otool_64.o: fat_otool_64.c.o
+
+.PHONY : fat_otool_64.o
+
+# target to build an object file
+fat_otool_64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_otool_64.c.o
+.PHONY : fat_otool_64.c.o
+
+fat_otool_64.i: fat_otool_64.c.i
+
+.PHONY : fat_otool_64.i
+
+# target to preprocess a source file
+fat_otool_64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_otool_64.c.i
+.PHONY : fat_otool_64.c.i
+
+fat_otool_64.s: fat_otool_64.c.s
+
+.PHONY : fat_otool_64.s
+
+# target to generate assembly for a file
+fat_otool_64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/fat_otool_64.c.s
+.PHONY : fat_otool_64.c.s
+
 file_inside.o: file_inside.c.o
 
 .PHONY : file_inside.o
@@ -3301,6 +3382,33 @@ mach_o_64.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_64.c.s
 .PHONY : mach_o_64.c.s
 
+mach_o_otool.o: mach_o_otool.c.o
+
+.PHONY : mach_o_otool.o
+
+# target to build an object file
+mach_o_otool.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_otool.c.o
+.PHONY : mach_o_otool.c.o
+
+mach_o_otool.i: mach_o_otool.c.i
+
+.PHONY : mach_o_otool.i
+
+# target to preprocess a source file
+mach_o_otool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_otool.c.i
+.PHONY : mach_o_otool.c.i
+
+mach_o_otool.s: mach_o_otool.c.s
+
+.PHONY : mach_o_otool.s
+
+# target to generate assembly for a file
+mach_o_otool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/mach_o_otool.c.s
+.PHONY : mach_o_otool.c.s
+
 magic.o: magic.c.o
 
 .PHONY : magic.o
@@ -3355,6 +3463,33 @@ nm.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/nm.c.s
 .PHONY : nm.c.s
 
+otool.o: otool.c.o
+
+.PHONY : otool.o
+
+# target to build an object file
+otool.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/otool.c.o
+.PHONY : otool.c.o
+
+otool.i: otool.c.i
+
+.PHONY : otool.i
+
+# target to preprocess a source file
+otool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/otool.c.i
+.PHONY : otool.c.i
+
+otool.s: otool.c.s
+
+.PHONY : otool.s
+
+# target to generate assembly for a file
+otool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/otool.c.s
+.PHONY : otool.c.s
+
 print_nm.o: print_nm.c.o
 
 .PHONY : print_nm.o
@@ -3382,6 +3517,33 @@ print_nm.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm.c.s
 .PHONY : print_nm.c.s
 
+print_otool.o: print_otool.c.o
+
+.PHONY : print_otool.o
+
+# target to build an object file
+print_otool.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_otool.c.o
+.PHONY : print_otool.c.o
+
+print_otool.i: print_otool.c.i
+
+.PHONY : print_otool.i
+
+# target to preprocess a source file
+print_otool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_otool.c.i
+.PHONY : print_otool.c.i
+
+print_otool.s: print_otool.c.s
+
+.PHONY : print_otool.s
+
+# target to generate assembly for a file
+print_otool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_otool.c.s
+.PHONY : print_otool.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -3400,6 +3562,15 @@ help:
 	@echo "... fat_o.o"
 	@echo "... fat_o.i"
 	@echo "... fat_o.s"
+	@echo "... fat_o_64.o"
+	@echo "... fat_o_64.i"
+	@echo "... fat_o_64.s"
+	@echo "... fat_otool.o"
+	@echo "... fat_otool.i"
+	@echo "... fat_otool.s"
+	@echo "... fat_otool_64.o"
+	@echo "... fat_otool_64.i"
+	@echo "... fat_otool_64.s"
 	@echo "... file_inside.o"
 	@echo "... file_inside.i"
 	@echo "... file_inside.s"
@@ -3742,15 +3913,24 @@ help:
 	@echo "... mach_o_64.o"
 	@echo "... mach_o_64.i"
 	@echo "... mach_o_64.s"
+	@echo "... mach_o_otool.o"
+	@echo "... mach_o_otool.i"
+	@echo "... mach_o_otool.s"
 	@echo "... magic.o"
 	@echo "... magic.i"
 	@echo "... magic.s"
 	@echo "... nm.o"
 	@echo "... nm.i"
 	@echo "... nm.s"
+	@echo "... otool.o"
+	@echo "... otool.i"
+	@echo "... otool.s"
 	@echo "... print_nm.o"
 	@echo "... print_nm.i"
 	@echo "... print_nm.s"
+	@echo "... print_otool.o"
+	@echo "... print_otool.i"
+	@echo "... print_otool.s"
 .PHONY : help
 
 

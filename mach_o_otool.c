@@ -7,7 +7,8 @@ int	check_part_segment_otool_64(void *lc, t_sect *sect)
 
 	i = 0;
 	se64 = (void *)(lc + sizeof(struct segment_command_64));
-	while (i < *((unsigned int *)((void *)lc + NSECTS_64)))
+	while (i < *((unsigned int *)((void *)lc + \
+		(int)(&((struct segment_command_64 *)(0x0))->nsects))))
 	{
 		if (!ft_strcmp(se64->sectname, "__text"))
 		{
@@ -29,7 +30,8 @@ int	check_part_segment_otool_32(void *lc, t_sect *sect)
 
 	i = 0;
 	se = (void *)(lc + sizeof(struct segment_command));
-	while (i < *((unsigned int *)((void *)lc + NSECTS)))
+	while (i < *((unsigned int *)((void *)lc + \
+		(int)(&((struct segment_command *)(0x0))->nsects))))
 	{
 		if (!ft_strcmp(se->sectname, "__text"))
 		{
@@ -53,7 +55,8 @@ int	get_size_sect_64(char *flb, size_t stat_size, char arch_size, t_sect *sect)
 	j = 0;
 	i = 0;
 	lc = (void *)flb + sizeof(struct mach_header_64);
-	while (j++ < *((unsigned int *)(flb + MH_NCMDS)) && \
+	while (j++ < *((unsigned int *)(flb + \
+		(int)(&((struct mach_header *)(0x0))->ncmds))) && \
 			(void *)lc < stat_size + (void *)flb)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
@@ -78,7 +81,8 @@ int	get_size_sect(char *flb, size_t stat_size, char arch_size, t_sect *sect)
 	if (arch_size == 64)
 		return (get_size_sect_64(flb, stat_size, 64, sect));
 	lc = (void *)flb + sizeof(struct mach_header);
-	while (j++ < *((unsigned int *)(flb + MH_NCMDS)) && \
+	while (j++ < *((unsigned int *)(flb + \
+		(int)(&((struct mach_header *)(0x0))->ncmds))) && \
 			(void *)lc < stat_size + (void *)flb)
 	{
 		if (lc->cmd == LC_SEGMENT)

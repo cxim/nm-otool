@@ -1,26 +1,22 @@
-//
-// Created by И Б on 12.05.2021.
-//
-
 #include "nmotool.h"
 
-int		check_it(char *flb, size_t i, char arch_size)
+int	check_it_32(char *flb, size_t i)
 {
 	unsigned int	cpu;
 	size_t			iter;
 
-	cpu = *(unsigned int*)(flb + 8 + (i * (arch_size == 64 ? 24 : 20)));
+	cpu = *(unsigned int *)(flb + 8 + (i * 20));
 	iter = 0;
-	while (iter < *(unsigned int*)(flb + 4))
+	while (iter < *(unsigned int *)(flb + 4))
 	{
 		if (iter != i)
 		{
-			if (*(unsigned int*)(flb + 8 + (iter * (arch_size == 64 ? 24 : 20))) == cpu)
+			if (*(unsigned int *)(flb + 8 + (iter * 20)) == cpu)
 				return (0);
-			if (*(unsigned int*)(flb + 8 + (iter * (arch_size == 64 ? 24 : 20))) ==
+			if (*(unsigned int *)(flb + 8 + (iter * 20)) == \
 					(cpu | 0x01000000))
 				return (0);
-			if ((*(unsigned int*)(flb + 8 + (iter * (arch_size == 64 ? 24 : 20))) | 0x01000000) == cpu)
+			if ((*(unsigned int *)(flb + 8 + (iter * 20)) | 0x01000000) == cpu)
 				return (1);
 		}
 		iter++;
@@ -28,34 +24,34 @@ int		check_it(char *flb, size_t i, char arch_size)
 	return (iter);
 }
 
-size_t	len_flb(char *flb, size_t stat_size, char arch_size)
+size_t	len_flb_32(char *flb, size_t stat_size)
 {
-	size_t	len;
-	size_t	res;
-	size_t	i;
+	size_t				len;
+	size_t				res;
+	size_t				i;
 	struct fat_arch		*fa_32;
-	struct fat_arch_64		*fa_64;
+	struct fat_arch_64	*fa_64;
 
 	i = 0;
 	res = 0;
-	len = *(unsigned int*)(flb + 4);
-	fa_32 = (struct fat_arch*)(flb + 8);
-	fa_64 = (struct fat_arch_64*)(flb + 8);
-	while (i < len && i * (arch_size == 64 ? sizeof(*fa_64) :
-						   sizeof(*fa_32)) + 8 < stat_size)
+	len = *(unsigned int *)(flb + 4);
+	fa_32 = (struct fat_arch *)(flb + 8);
+	fa_64 = (struct fat_arch_64 *)(flb + 8);
+	while (i < len && i * sizeof(*fa_32) + 8 < stat_size)
 	{
-		if (check_it(flb, i, arch_size))
+		if (check_it_32(flb, i))
 			res++;
 		i++;
 	}
 	return (res);
 }
 
-void 	init_fat_o(size_t *i, struct fat_arch_64 **fa_64, struct fat_arch **fa_32, char *flb)
+void 	init_fat_o(size_t *i, struct fat_arch_64 **fa_64, \
+	struct fat_arch **fa_32, char *flb)
 {
 	*i = 0;
-	*fa_32 = (struct fat_arch*)(flb + 8);
-	*fa_64 = (struct fat_arch_64*)(flb + 8);
+	*fa_32 = (struct fat_arch *)(flb + 8);
+	*fa_64 = (struct fat_arch_64 *)(flb + 8);
 }
 
 void	output_header(char *name, cpu_type_t cpu_type)
@@ -67,20 +63,20 @@ void	output_header(char *name, cpu_type_t cpu_type)
 	write(1, "):\n", 3);
 }
 
-t_lst	*fat_o(char *flb, size_t stat_size, char arch_size, char *name)
+t_lst	*fat_o_32(char *flb, size_t stat_size, char arch_size, char *name)
 {
-	size_t		len;
-	size_t		i;
+	size_t				len;
+	size_t				i;
 	struct fat_arch		*fa_32;
-	struct fat_arch_64		*fa_64;
+	struct fat_arch_64	*fa_64;
 
-	len = len_flb(flb, stat_size, arch_size);
+	len = len_flb_32(flb, stat_size);
 	init_fat_o(&i, &fa_64, &fa_32, flb);
-	while (len && i * (arch_size == 64 ? sizeof(*fa_64) : sizeof(*fa_32)) + 8 < stat_size)
+	while (len && i * sizeof(*fa_32) + 8 < stat_size)
 	{
-		if (len_flb(flb, stat_size, arch_size) > 1)
+		if (len_flb_32(flb, stat_size) > 1)
 			output_header(name, fa_32->cputype);
-		if (check_it(flb, i, arch_size))
+		if (check_it_32(flb, i))
 		{
 			if (arch_size == 64)
 				work_inside_binary(flb + fa_64->offset, fa_64->size, name);

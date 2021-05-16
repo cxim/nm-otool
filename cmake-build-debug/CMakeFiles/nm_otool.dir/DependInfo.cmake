@@ -7,6 +7,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mnarwhal/Desktop/nm-otool/cpu_file.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/cpu_file.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/errors.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/errors.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/fat_o.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/fat_o.c.o"
+  "/Users/mnarwhal/Desktop/nm-otool/fat_o_64.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/fat_o_64.c.o"
+  "/Users/mnarwhal/Desktop/nm-otool/fat_otool.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/fat_otool.c.o"
+  "/Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/fat_otool_64.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/file_inside.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/file_inside.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/ft_atoi.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_atoi.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/ft_printf/includes/libft/ft_bzero.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/ft_printf/includes/libft/ft_bzero.c.o"
@@ -121,9 +124,12 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mnarwhal/Desktop/nm-otool/mach_o.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/mach_o.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/mach_o_32_64.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/mach_o_32_64.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/mach_o_64.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/mach_o_64.c.o"
+  "/Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/mach_o_otool.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/magic.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/magic.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/nm.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/nm.c.o"
+  "/Users/mnarwhal/Desktop/nm-otool/otool.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/otool.c.o"
   "/Users/mnarwhal/Desktop/nm-otool/print_nm.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/print_nm.c.o"
+  "/Users/mnarwhal/Desktop/nm-otool/print_otool.c" "/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/CMakeFiles/nm_otool.dir/print_otool.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
