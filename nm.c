@@ -53,7 +53,10 @@ void	get_info_file(char *name_file)
 int	main(int ac, char **av)
 {
 	if (ac < 2)
-		errors_nm_otool(ARG);
+	{
+		get_info_file("a.out");
+		return (0);
+	}
 	av += 1;
 	if (ac > 2)
 	{

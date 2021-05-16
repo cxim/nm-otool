@@ -33,7 +33,7 @@ void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 		list = fat_o_32(flb, stat_size, 32, file_name);
 		arch_size = 32;
 	}
-	else
+	else if (!list)
 		errors_nm_otool(ARCH_ERR);
 	sorting_lst(list);
 	print_lst(list, arch_size);

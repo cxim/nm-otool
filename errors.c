@@ -3,7 +3,7 @@
 void	errors_nm_otool(enum e_errors error)
 {
 	if (error == ARG)
-		ft_putstr_fd("a.out: No such file or directory.\n", 2);
+		ft_putstr_fd("a.out1: No such file or directory.\n", 2);
 	else if (error == OPEN)
 		ft_putstr_fd("No such file or directory.\n", 2);
 	else if (error == FSTAT)
