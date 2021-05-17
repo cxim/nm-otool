@@ -50,98 +50,70 @@ void	get_info_file(char *name_file)
 	check_error_nm(file_length_bytes, stat, fd);
 }
 
-int add_ag(char *str, t_flags flags) {
-	int i;
-
-	i = 1;
-	if (ft_strlen(str) == 2 && str[1] == '-')
-		flags.minus = 1;
+void	get_agg(t_flags *tmp, char *tmp_str, size_t i)
+{
+	if (tmp_str[i] == 'a')
+		tmp->flag_a = 1;
+	else if (tmp_str[i] == 'b')
+		tmp->flag_b = 1;
+	else if (tmp_str[i] == 'c')
+		tmp->flag_c = 1;
 	else
-		{
-		while (str[i] != '\0')
-		{
-			if(str[i] == 'a')
-				flags.flag_a = 1;
-			else if (str[i] == 'b')
-				flags.flag_b = 1;
-			else if (str[i] == 'c')
-				flags.flag_c = 1;
-			else
-				{
-				ft_putstr_fd(": Invalid argument\n", 2);
-				exit(0);
-			}
-			i++;
-		}
+	{
+		ft_putstr_fd(tmp_str, 2);
+		ft_putstr_fd(" : Invalid argument\n", 2);
+		exit(0);
 	}
-	return 1;
 }
 
-
-t_flags init(char **names)
+t_flags	init(char **names)
 {
-	t_flags tmp;
-	char **tmp_names;
-	size_t i;
-	char *tmp_str;
+	t_flags	tmp;
+	char	**tmp_names;
+	size_t	i;
+	char	*tmp_str;
 
 	i = 1;
-	tmp.minus = 0;
-	tmp.flag_a = 0;
-	tmp.flag_b = 0;
-	tmp.flag_c = 0;
 	tmp_names = names;
 	while (*tmp_names)
 	{
-		if (*tmp_names[0] == '-' && ft_strlen(*tmp_names) > 1 && tmp.minus != 1)
+		if (*tmp_names[0] == '-' && ft_strlen(*tmp_names) > 1)
 		{
 			tmp.minus = 1;
 			tmp_str = *tmp_names;
 			while (i < ft_strlen(tmp_str))
 			{
-				if (tmp_str[i] == 'a')
-					tmp.flag_a = 1;
-				else if (tmp_str[i] == 'b')
-					tmp.flag_b = 1;
-				else if (tmp_str[i] == 'c')
-					tmp.flag_c = 1;
-				else
-					{
-					ft_putstr_fd(": Invalid argument\n", 2);
-					exit(0);
-				}
+				get_agg(&tmp, tmp_str, i);
 				i++;
 				if (i == ft_strlen(tmp_str))
-					*tmp_names = NULL;
+					*tmp_names = "\0";
 			}
 		}
+		i = 1;
 		tmp_names++;
 	}
-
-
-
 	return (tmp);
 }
 
 int	main(int ac, char **av)
 {
-	t_flags flags;
+	t_flags	flags;
 
 	if (ac < 2)
-	{
-		get_info_file("a.out");
-		return (0);
-	}
+		solo_func();
 	flags = init(av);
 	av += 1;
 	if (ac > 2)
 	{
 		while (*av)
 		{
-			write(1, "\n", 1);
-			ft_putstr(*av);
-			write(1, ":\n", 2);
-			get_info_file(*av);
+			if (!(flags.minus == 1 && ft_strcmp(*av, "\0") == 0))
+			{
+				write(1, "\n", 1);
+				ft_putstr(*av);
+				write(1, ":\n", 2);
+				get_info_file(*av);
+			}
 			av += 1;
 		}
 	}

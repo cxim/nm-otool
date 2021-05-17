@@ -1,5 +1,11 @@
 #include "nmotool.h"
 
+void	solo_func(void)
+{
+	get_info_file("a.out");
+	exit(0);
+}
+
 t_lst	*work_ins_bin_p_two(char *flb, size_t stat_size, \
 	char *arch_size, t_lst *list)
 {

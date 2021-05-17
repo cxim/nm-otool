@@ -42,7 +42,7 @@ enum	e_errors
 	CORR_FILE
 };
 
-typedef struct	s_flags
+typedef struct s_flags
 {
 	int	minus;
 	int	flag_a;
@@ -80,5 +80,6 @@ t_lst	*fat_o_64(char *flb, size_t stat_size, char arch_size, char *name);
 void	output_header(char *name, cpu_type_t cpu_type);
 void	init_fat_o(size_t *i, struct fat_arch_64 **fa_64,	\
 	struct fat_arch **fa_32, char *flb);
+void	solo_func(void);
 
 #endif
