@@ -48,6 +48,9 @@ CMakeFiles/nm_otool.dir/libft/ft_putstr_mod.c.o: ../libft/libft.h
 CMakeFiles/nm_otool.dir/libft/ft_strcmp.c.o: ../libft/ft_strcmp.c
 CMakeFiles/nm_otool.dir/libft/ft_strcmp.c.o: ../libft/libft.h
 
+CMakeFiles/nm_otool.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
+CMakeFiles/nm_otool.dir/libft/ft_strlen.c.o: ../libft/libft.h
+
 CMakeFiles/nm_otool.dir/lst_fuctions.c.o: ../libft/libft.h
 CMakeFiles/nm_otool.dir/lst_fuctions.c.o: ../lst_fuctions.c
 CMakeFiles/nm_otool.dir/lst_fuctions.c.o: ../nmotool.h

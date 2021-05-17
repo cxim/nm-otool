@@ -14,7 +14,7 @@
 NAME = libft.a
 
 SRC = ft_putchar.c ft_putchar_fd.c ft_putendl_fd.c ft_putstr.c ft_putstr_fd.c \
-					ft_putchar_mod.c ft_putstr_mod.c ft_strcmp.c
+					ft_putchar_mod.c ft_putstr_mod.c ft_strcmp.c ft_strlen.c
 
 FLAGS = gcc -c -Wall -Wextra -Werror -g
 OBJ = $(SRC:.c=.o)

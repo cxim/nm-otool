@@ -41,4 +41,5 @@ int				ft_cut_space(const char **s);
 int				ft_get_integer(const char **p);
 int				ft_strlen_mod(char const *str);
 int				ft_putstr_mod(char const *str, int fd);
+size_t			ft_strlen(const char *s);
 #endif

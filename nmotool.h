@@ -42,6 +42,14 @@ enum	e_errors
 	CORR_FILE
 };
 
+typedef struct	s_flags
+{
+	int	minus;
+	int	flag_a;
+	int	flag_b;
+	int	flag_c;
+}				t_flags;
+
 void	errors_nm_otool(enum e_errors error);
 void	get_info_file(char *name_file);
 void	work_inside_binary(char *flb, size_t stat_size, char *file_name);

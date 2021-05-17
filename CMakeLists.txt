@@ -30,4 +30,4 @@ add_executable(nm_otool
 		nm.c
 		nmotool.h
 		print_nm.c
-		)
+		libft/ft_strlen.c)

@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/libft/ft_putstr_fd.c.o"
   "CMakeFiles/nm_otool.dir/libft/ft_putstr_mod.c.o"
   "CMakeFiles/nm_otool.dir/libft/ft_strcmp.c.o"
+  "CMakeFiles/nm_otool.dir/libft/ft_strlen.c.o"
   "CMakeFiles/nm_otool.dir/lst_fuctions.c.o"
   "CMakeFiles/nm_otool.dir/mach_o.c.o"
   "CMakeFiles/nm_otool.dir/mach_o_32_64.c.o"

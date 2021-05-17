@@ -501,6 +501,33 @@ libft/ft_strcmp.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/libft/ft_strcmp.c.s
 .PHONY : libft/ft_strcmp.c.s
 
+libft/ft_strlen.o: libft/ft_strlen.c.o
+
+.PHONY : libft/ft_strlen.o
+
+# target to build an object file
+libft/ft_strlen.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/libft/ft_strlen.c.o
+.PHONY : libft/ft_strlen.c.o
+
+libft/ft_strlen.i: libft/ft_strlen.c.i
+
+.PHONY : libft/ft_strlen.i
+
+# target to preprocess a source file
+libft/ft_strlen.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/libft/ft_strlen.c.i
+.PHONY : libft/ft_strlen.c.i
+
+libft/ft_strlen.s: libft/ft_strlen.c.s
+
+.PHONY : libft/ft_strlen.s
+
+# target to generate assembly for a file
+libft/ft_strlen.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/libft/ft_strlen.c.s
+.PHONY : libft/ft_strlen.c.s
+
 lst_fuctions.o: lst_fuctions.c.o
 
 .PHONY : lst_fuctions.o
@@ -741,6 +768,9 @@ help:
 	@echo "... libft/ft_strcmp.o"
 	@echo "... libft/ft_strcmp.i"
 	@echo "... libft/ft_strcmp.s"
+	@echo "... libft/ft_strlen.o"
+	@echo "... libft/ft_strlen.i"
+	@echo "... libft/ft_strlen.s"
 	@echo "... lst_fuctions.o"
 	@echo "... lst_fuctions.i"
 	@echo "... lst_fuctions.s"
