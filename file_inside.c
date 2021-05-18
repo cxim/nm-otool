@@ -1,8 +1,8 @@
 #include "nmotool.h"
 
-void	solo_func(void)
+void	solo_func(t_flags flags)
 {
-	get_info_file("a.out");
+	get_info_file("a.out", flags);
 	exit(0);
 }
 
@@ -18,7 +18,7 @@ t_lst	*work_ins_bin_p_two(char *flb, size_t stat_size, \
 	return (list);
 }
 
-void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
+void	work_inside_binary(char *flb, size_t stat_size, char *file_name, t_flags flags)
 {
 	t_lst	*list;
 	char	arch_size;
@@ -31,17 +31,18 @@ void	work_inside_binary(char *flb, size_t stat_size, char *file_name)
 		return ;
 	else if (!list && *(unsigned int *)flb == FAT_MAGIC_64)
 	{
-		list = fat_o_64(flb, stat_size, 64, file_name);
+		list = fat_o_64(flb, stat_size, flags, file_name);
 		arch_size = 64;
 	}
 	else if (!list && *(unsigned int *)flb == FAT_MAGIC)
 	{
-		list = fat_o_32(flb, stat_size, 32, file_name);
+		list = fat_o_32(flb, stat_size, flags, file_name);
 		arch_size = 32;
 	}
 	else if (!list)
 		errors_nm_otool(ARCH_ERR);
-	sorting_lst(list);
-	print_lst(list, arch_size);
+	if (flags.flag_block != 1)
+		sorting_lst(list, flags);
+	print_lst(list, arch_size, flags, file_name);
 	free_lst(list);
 }

@@ -63,7 +63,7 @@ void	output_header(char *name, cpu_type_t cpu_type)
 	write(1, "):\n", 3);
 }
 
-t_lst	*fat_o_32(char *flb, size_t stat_size, char arch_size, char *name)
+t_lst	*fat_o_32(char *flb, size_t stat_size, t_flags flags, char *name)
 {
 	size_t				len;
 	size_t				i;
@@ -78,10 +78,7 @@ t_lst	*fat_o_32(char *flb, size_t stat_size, char arch_size, char *name)
 			output_header(name, fa_32->cputype);
 		if (check_it_32(flb, i))
 		{
-			if (arch_size == 64)
-				work_inside_binary(flb + fa_64->offset, fa_64->size, name);
-			else
-				work_inside_binary(flb + fa_32->offset, fa_32->size, name);
+			work_inside_binary(flb + fa_32->offset, fa_32->size, name, flags);
 			len -= 1;
 		}
 		i++;

@@ -16,13 +16,9 @@ string.h
 fcntl.h
 -
 
-/Users/ib/cxim/nm-otool/nm.c
+/Users/ib/cxim/nm-otool/lst_fuctions.c
 nmotool.h
 /Users/ib/cxim/nm-otool/nmotool.h
-stdio.h
--
-sys/types.h
--
 
 /Users/ib/cxim/nm-otool/nmotool.h
 libft/libft.h

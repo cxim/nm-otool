@@ -12,28 +12,36 @@ void	free_lst(t_lst *lst)
 	}
 }
 
-int	is_sorted(t_lst *lst)
+int	is_sorted(t_lst *lst, t_flags flags)
 {
 	while (lst && lst->next)
 	{
-		if (ft_strcmp(lst->data.name, lst->next->data.name) > 0)
+		if (flags.flag_reverse != 1 && ft_strcmp(lst->data.name, lst->next->data.name) > 0)
+			return (0);
+		else if (flags.flag_reverse == 1 && ft_strcmp(lst->data.name, lst->next->data.name) < 0)
 			return (0);
 		lst = lst->next;
 	}
 	return (1);
 }
 
-t_lst	*sorting_lst(t_lst *head)
+t_lst	*sorting_lst(t_lst *head, t_flags flags)
 {
 	t_data	tmp;
 	t_lst	*lst;
 
-	while (head && !is_sorted(head))
+	while (head && !is_sorted(head, flags))
 	{
 		lst = head;
 		while (lst->next)
 		{
-			if (ft_strcmp(lst->data.name, lst->next->data.name) > 0)
+			if (ft_strcmp(lst->data.name, lst->next->data.name)  > 0 && flags.flag_reverse != 1)
+			{
+				tmp = lst->data;
+				lst->data = lst->next->data;
+				lst->next->data = tmp;
+			}
+			else if (ft_strcmp(lst->data.name, lst->next->data.name ) < 0 && flags.flag_reverse == 1)
 			{
 				tmp = lst->data;
 				lst->data = lst->next->data;

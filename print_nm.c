@@ -52,22 +52,33 @@ void	print_o(size_t offset, char arch_size)
 	print_addr((void *)s);
 }
 
-void	print_lst(t_lst *lst, char arch_size)
+
+void	ft_put_name(char *name)
+{
+	ft_putstr(name);
+	ft_putstr(": ");
+}
+
+void	print_lst(t_lst *lst, char arch_size, t_flags flags, char *file)
 {
 	while (lst)
 	{
-		if (lst->data.type == 'U' || lst->data.type == 'u')
+		if (flags.flag_put_name == 1)
+			ft_put_name(file);
+		if (flags.flag_no_hex != 1)
 		{
-			if (arch_size == 32)
-				write(1, "                ", 8);
-			else
-				write(1, "                ", 16);
+			if (lst->data.type == 'U' || lst->data.type == 'u')
+			{
+				if (arch_size == 32)
+					write(1, "                ", 8);
+				else
+					write(1, "                ", 16);
+			} else
+				print_o(lst->data.offset, arch_size);
+			write(1, " ", 1);
+			write(1, &(lst->data.type), 1);
+			write(1, " ", 1);
 		}
-		else
-			print_o(lst->data.offset, arch_size);
-		write(1, " ", 1);
-		write(1, &(lst->data.type), 1);
-		write(1, " ", 1);
 		ft_putstr(lst->data.name);
 		write(1, "\n", 1);
 		lst = lst->next;

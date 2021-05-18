@@ -25,7 +25,7 @@ void	check_error_nm(void *flb, struct stat stat, int fd)
 		errors_nm_otool(CLOSE);
 }
 
-void	get_info_file(char *name_file)
+void	get_info_file(char *name_file, t_flags flags)
 {
 	struct stat	stat;
 	int			fd;
@@ -46,18 +46,20 @@ void	get_info_file(char *name_file)
 		errors_nm_otool(MMAP);
 		return ;
 	}
-	work_inside_binary(file_length_bytes, stat.st_size, name_file);
+	work_inside_binary(file_length_bytes, stat.st_size, name_file, flags);
 	check_error_nm(file_length_bytes, stat, fd);
 }
 
 void	get_agg(t_flags *tmp, char *tmp_str, size_t i)
 {
-	if (tmp_str[i] == 'a')
-		tmp->flag_a = 1;
-	else if (tmp_str[i] == 'b')
-		tmp->flag_b = 1;
-	else if (tmp_str[i] == 'c')
-		tmp->flag_c = 1;
+	if (tmp_str[i] == 'p')
+		tmp->flag_block = 1;
+	else if (tmp_str[i] == 'r')
+		tmp->flag_reverse = 1;
+	else if (tmp_str[i] == 'A')
+		tmp->flag_put_name = 1;
+	else if (tmp_str[i] == 'j')
+		tmp->flag_no_hex = 1;
 	else
 	{
 		ft_putstr_fd(tmp_str, 2);
@@ -99,9 +101,9 @@ int	main(int ac, char **av)
 {
 	t_flags	flags;
 
-	if (ac < 2)
-		solo_func();
 	flags = init(av);
+	if (ac < 2)
+		solo_func(flags);
 	av += 1;
 	if (ac > 2)
 	{
@@ -112,12 +114,12 @@ int	main(int ac, char **av)
 				write(1, "\n", 1);
 				ft_putstr(*av);
 				write(1, ":\n", 2);
-				get_info_file(*av);
+				get_info_file(*av, flags);
 			}
 			av += 1;
 		}
 	}
 	else
-		get_info_file(av[0]);
+		get_info_file(av[0], flags);
 	return (0);
 }
