@@ -16,18 +16,29 @@ int	is_sorted(t_lst *lst, t_flags flags)
 {
 	while (lst && lst->next)
 	{
-		if (flags.flag_reverse != 1 && ft_strcmp(lst->data.name, lst->next->data.name) > 0)
+		if (flags.flag_reverse != 1 && ft_strcmp(lst->data.name, \
+		lst->next->data.name) > 0)
 			return (0);
-		else if (flags.flag_reverse == 1 && ft_strcmp(lst->data.name, lst->next->data.name) < 0)
+		else if (flags.flag_reverse == 1 && ft_strcmp(lst->data.name, \
+		lst->next->data.name) < 0)
 			return (0);
 		lst = lst->next;
 	}
 	return (1);
 }
 
-t_lst	*sorting_lst(t_lst *head, t_flags flags)
+t_lst	*sort_lst_two(t_lst *lst)
 {
 	t_data	tmp;
+
+	tmp = lst->data;
+	lst->data = lst->next->data;
+	lst->next->data = tmp;
+	return (lst);
+}
+
+t_lst	*sorting_lst(t_lst *head, t_flags flags)
+{
 	t_lst	*lst;
 
 	while (head && !is_sorted(head, flags))
@@ -35,17 +46,15 @@ t_lst	*sorting_lst(t_lst *head, t_flags flags)
 		lst = head;
 		while (lst->next)
 		{
-			if (ft_strcmp(lst->data.name, lst->next->data.name)  > 0 && flags.flag_reverse != 1)
+			if (ft_strcmp(lst->data.name, lst->next->data.name) > \
+				0 && flags.flag_reverse != 1)
 			{
-				tmp = lst->data;
-				lst->data = lst->next->data;
-				lst->next->data = tmp;
+				sort_lst_two(lst);
 			}
-			else if (ft_strcmp(lst->data.name, lst->next->data.name ) < 0 && flags.flag_reverse == 1)
+			else if (ft_strcmp(lst->data.name, lst->next->data.name) < \
+				0 && flags.flag_reverse == 1)
 			{
-				tmp = lst->data;
-				lst->data = lst->next->data;
-				lst->next->data = tmp;
+				sort_lst_two(lst);
 			}
 			lst = lst->next;
 		}

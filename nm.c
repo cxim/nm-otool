@@ -68,6 +68,16 @@ void	get_agg(t_flags *tmp, char *tmp_str, size_t i)
 	}
 }
 
+void init_flags(t_flags *flags)
+{
+	flags->sum_flags = 0;
+	flags->flag_reverse = 0;
+	flags->flag_put_name = 0;
+	flags->flag_no_hex = 0;
+	flags->flag_block = 0;
+	flags->minus = 0;
+}
+
 t_flags	init(char **names)
 {
 	t_flags	tmp;
@@ -77,6 +87,8 @@ t_flags	init(char **names)
 
 	i = 1;
 	tmp_names = names;
+	init_flags(&tmp);
+	tmp_names++;
 	while (*tmp_names)
 	{
 		if (*tmp_names[0] == '-' && ft_strlen(*tmp_names) > 1)
@@ -91,10 +103,24 @@ t_flags	init(char **names)
 					*tmp_names = "\0";
 			}
 		}
+		else
+			tmp.sum_flags++;
 		i = 1;
 		tmp_names++;
 	}
 	return (tmp);
+}
+
+void find_file(char **av, t_flags flags)
+{
+	while (*av)
+	{
+		if (!(flags.minus == 1 && ft_strcmp(*av, "\0") == 0))
+		{
+			get_info_file(*av, flags);
+		}
+		av += 1;
+	}
 }
 
 int	main(int ac, char **av)
@@ -105,7 +131,7 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		solo_func(flags);
 	av += 1;
-	if (ac > 2)
+	if (ac > 2 && flags.sum_flags > 1 && flags.flag_put_name != 1)
 	{
 		while (*av)
 		{
@@ -119,6 +145,8 @@ int	main(int ac, char **av)
 			av += 1;
 		}
 	}
+	else if (ac - 1 - flags.sum_flags == 1 || flags.flag_put_name == 1)
+		find_file(av, flags);
 	else
 		get_info_file(av[0], flags);
 	return (0);

@@ -49,6 +49,7 @@ typedef struct s_flags
 	int	flag_reverse;
 	int	flag_put_name;
 	int flag_no_hex;
+	int sum_flags;
 }				t_flags;
 
 void	errors_nm_otool(enum e_errors error);

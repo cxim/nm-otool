@@ -18,7 +18,8 @@ t_lst	*work_ins_bin_p_two(char *flb, size_t stat_size, \
 	return (list);
 }
 
-void	work_inside_binary(char *flb, size_t stat_size, char *file_name, t_flags flags)
+void	work_inside_binary(char *flb, size_t stat_size, \
+	char *file_name, t_flags flags)
 {
 	t_lst	*list;
 	char	arch_size;
