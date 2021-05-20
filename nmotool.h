@@ -48,13 +48,14 @@ typedef struct s_flags
 	int	flag_block;
 	int	flag_reverse;
 	int	flag_put_name;
-	int flag_no_hex;
-	int sum_flags;
+	int	flag_no_hex;
+	int	sum_flags;
 }				t_flags;
 
 void	errors_nm_otool(enum e_errors error);
 void	get_info_file(char *name_file, t_flags flags);
-void	work_inside_binary(char *flb, size_t stat_size, char *file_name, t_flags flags);
+void	work_inside_binary(char *flb, size_t stat_size, \
+		char *file_name, t_flags flags);
 char	*get_endian_reverse(char *flb, size_t stat_size);
 //t_lst *mach_o(char *flb, size_t file_size, char size_arch, char *a_s);
 //void *get_symtab(char *flb, size_t file_size, char size_arch);
@@ -83,5 +84,9 @@ void	output_header(char *name, cpu_type_t cpu_type);
 void	init_fat_o(size_t *i, struct fat_arch_64 **fa_64,	\
 	struct fat_arch **fa_32, char *flb);
 void	solo_func(t_flags flags);
-
+void	ft_put_name(char *name);
+void	init_part_two(t_flags *tmp, char *tmp_str, size_t *i, char **tmp_names);
+void	get_agg(t_flags *tmp, char *tmp_str, size_t i);
+void	get_agg(t_flags *tmp, char *tmp_str, size_t i);
+void	init_flags(t_flags *flags);
 #endif

@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/Users/ib/cxim/nm-otool/cpu_file.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/errors.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/fat_o.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/fat_o_64.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/file_inside.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
 /Users/ib/cxim/nm-otool/libft/libft.h
 unistd.h
 -
@@ -15,6 +35,26 @@ string.h
 -
 fcntl.h
 -
+
+/Users/ib/cxim/nm-otool/lst_fuctions.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/mach_o.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/mach_o_32_64.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/mach_o_64.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/magic.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
 
 /Users/ib/cxim/nm-otool/nm.c
 nmotool.h
@@ -41,4 +81,12 @@ mach-o/loader.h
 -
 mach-o/nlist.h
 -
+
+/Users/ib/cxim/nm-otool/print_nm.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
+
+/Users/ib/cxim/nm-otool/print_nm_m_p_two.c
+nmotool.h
+/Users/ib/cxim/nm-otool/nmotool.h
 

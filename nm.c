@@ -50,34 +50,6 @@ void	get_info_file(char *name_file, t_flags flags)
 	check_error_nm(file_length_bytes, stat, fd);
 }
 
-void	get_agg(t_flags *tmp, char *tmp_str, size_t i)
-{
-	if (tmp_str[i] == 'p')
-		tmp->flag_block = 1;
-	else if (tmp_str[i] == 'r')
-		tmp->flag_reverse = 1;
-	else if (tmp_str[i] == 'A')
-		tmp->flag_put_name = 1;
-	else if (tmp_str[i] == 'j')
-		tmp->flag_no_hex = 1;
-	else
-	{
-		ft_putstr_fd(tmp_str, 2);
-		ft_putstr_fd(" : Invalid argument\n", 2);
-		exit(0);
-	}
-}
-
-void init_flags(t_flags *flags)
-{
-	flags->sum_flags = 0;
-	flags->flag_reverse = 0;
-	flags->flag_put_name = 0;
-	flags->flag_no_hex = 0;
-	flags->flag_block = 0;
-	flags->minus = 0;
-}
-
 t_flags	init(char **names)
 {
 	t_flags	tmp;
@@ -96,12 +68,7 @@ t_flags	init(char **names)
 			tmp.minus = 1;
 			tmp_str = *tmp_names;
 			while (i < ft_strlen(tmp_str))
-			{
-				get_agg(&tmp, tmp_str, i);
-				i++;
-				if (i == ft_strlen(tmp_str))
-					*tmp_names = "\0";
-			}
+				init_part_two(&tmp, tmp_str, &i, tmp_names);
 		}
 		else
 			tmp.sum_flags++;
@@ -111,7 +78,7 @@ t_flags	init(char **names)
 	return (tmp);
 }
 
-void find_file(char **av, t_flags flags)
+void	find_file(char **av, t_flags flags)
 {
 	while (*av)
 	{

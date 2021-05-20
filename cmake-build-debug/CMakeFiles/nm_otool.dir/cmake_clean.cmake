@@ -21,6 +21,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nm_otool.dir/magic.c.o"
   "CMakeFiles/nm_otool.dir/nm.c.o"
   "CMakeFiles/nm_otool.dir/print_nm.c.o"
+  "CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.o"
   "nm_otool"
   "nm_otool.pdb"
 )

@@ -52,13 +52,6 @@ void	print_o(size_t offset, char arch_size)
 	print_addr((void *)s);
 }
 
-
-void	ft_put_name(char *name)
-{
-	ft_putstr(name);
-	ft_putstr(": ");
-}
-
 void	print_lst(t_lst *lst, char arch_size, t_flags flags, char *file)
 {
 	while (lst)
@@ -73,7 +66,8 @@ void	print_lst(t_lst *lst, char arch_size, t_flags flags, char *file)
 					write(1, "                ", 8);
 				else
 					write(1, "                ", 16);
-			} else
+			}
+			else
 				print_o(lst->data.offset, arch_size);
 			write(1, " ", 1);
 			write(1, &(lst->data.type), 1);

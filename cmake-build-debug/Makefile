@@ -717,6 +717,33 @@ print_nm.c.s:
 	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm.c.s
 .PHONY : print_nm.c.s
 
+print_nm_m_p_two.o: print_nm_m_p_two.c.o
+
+.PHONY : print_nm_m_p_two.o
+
+# target to build an object file
+print_nm_m_p_two.c.o:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.o
+.PHONY : print_nm_m_p_two.c.o
+
+print_nm_m_p_two.i: print_nm_m_p_two.c.i
+
+.PHONY : print_nm_m_p_two.i
+
+# target to preprocess a source file
+print_nm_m_p_two.c.i:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.i
+.PHONY : print_nm_m_p_two.c.i
+
+print_nm_m_p_two.s: print_nm_m_p_two.c.s
+
+.PHONY : print_nm_m_p_two.s
+
+# target to generate assembly for a file
+print_nm_m_p_two.c.s:
+	$(MAKE) -f CMakeFiles/nm_otool.dir/build.make CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.s
+.PHONY : print_nm_m_p_two.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -792,6 +819,9 @@ help:
 	@echo "... print_nm.o"
 	@echo "... print_nm.i"
 	@echo "... print_nm.s"
+	@echo "... print_nm_m_p_two.o"
+	@echo "... print_nm_m_p_two.i"
+	@echo "... print_nm_m_p_two.s"
 .PHONY : help
 
 

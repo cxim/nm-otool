@@ -79,3 +79,7 @@ CMakeFiles/nm_otool.dir/print_nm.c.o: ../libft/libft.h
 CMakeFiles/nm_otool.dir/print_nm.c.o: ../nmotool.h
 CMakeFiles/nm_otool.dir/print_nm.c.o: ../print_nm.c
 
+CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.o: ../libft/libft.h
+CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.o: ../nmotool.h
+CMakeFiles/nm_otool.dir/print_nm_m_p_two.c.o: ../print_nm_m_p_two.c
+
