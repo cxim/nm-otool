@@ -1,6 +1,6 @@
 C_FLAGS =  -I
-NAME_NM = nm
-NAME_OTOOL = otool
+NAME_NM = ft_nm
+NAME_OTOOL = ft_otool
 
 SRCS_ALL = errors.c magic.c mach_o.c lst_fuctions.c cpu_file.c mach_o_64.c mach_o_32_64.c
 SRCS_NM = nm.c  file_inside.c  print_nm.c fat_o.c fat_o_64.c print_nm_m_p_two.c

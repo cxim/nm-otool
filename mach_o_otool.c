@@ -106,6 +106,9 @@ void	mach_o_otool(char *flb, size_t stat_size, char arch_size)
 	sect.addr = 0;
 	sect_tab = get_size_sect(flb, stat_size, arch_size, &sect);
 	if (sect_tab == 0)
+	{
+		errors_nm_otool(ARCH_ERR);
 		return ;
+	}
 	output_mach_o_otool(flb, sect, arch_size);
 }

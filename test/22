@@ -64,4 +64,3 @@ nm: _check_it_64
 nm: _check_it_32
 nm: _check_error_nm
 nm: __mh_execute_header
-nm: __dyld_private

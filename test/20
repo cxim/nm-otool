@@ -1,6 +1,5 @@
 
 nm:
-__dyld_private
 __mh_execute_header
 _check_error_nm
 _check_it_32
@@ -69,7 +68,6 @@ _write
 dyld_stub_binder
 
 nm:
-__dyld_private
 __mh_execute_header
 _check_error_nm
 _check_it_32

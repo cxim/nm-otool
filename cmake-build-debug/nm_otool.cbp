@@ -8,156 +8,147 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ib/cxim/nm-otool/cmake-build-debug"/>
+				<Option working_dir="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ib/cxim/nm-otool/cmake-build-debug"/>
+				<Option working_dir="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ib/cxim/nm-otool/cmake-build-debug"/>
+				<Option working_dir="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="nm_otool">
-				<Option output="/Users/ib/cxim/nm-otool/cmake-build-debug/nm_otool" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ib/cxim/nm-otool/cmake-build-debug"/>
+				<Option output="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/nm_otool" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ib/cxim/nm-otool/."/>
-					<Add directory="/Users/ib/cxim/nm-otool/libft"/>
+					<Add directory="/Users/mnarwhal/Desktop/nm-otool/."/>
+					<Add directory="/Users/mnarwhal/Desktop/nm-otool/libft"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 nm_otool"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 nm_otool"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="nm_otool/fast">
-				<Option output="/Users/ib/cxim/nm-otool/cmake-build-debug/nm_otool" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ib/cxim/nm-otool/cmake-build-debug"/>
+				<Option output="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/nm_otool" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ib/cxim/nm-otool/."/>
-					<Add directory="/Users/ib/cxim/nm-otool/libft"/>
+					<Add directory="/Users/mnarwhal/Desktop/nm-otool/."/>
+					<Add directory="/Users/mnarwhal/Desktop/nm-otool/libft"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 nm_otool/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ib/cxim/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 nm_otool/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mnarwhal/Desktop/nm-otool/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ib/cxim/nm-otool/cpu_file.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/cpu_file.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/errors.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/errors.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/fat_o.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/fat_otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/fat_o_64.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/fat_otool_64.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/file_inside.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putchar.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putchar.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putchar_fd.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putchar_mod.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putchar_mod.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putendl.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putendl.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putendl_fd.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putstr.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putstr.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putstr_fd.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_putstr_mod.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_putstr_mod.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/ft_strcmp.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_strcmp.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/libft/libft.h">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/ft_strlen.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/lst_fuctions.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/libft/libft.h">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/mach_o.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/lst_fuctions.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/mach_o_32_64.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/mach_o.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/mach_o_64.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/mach_o_32_64.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/mach_o_otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/mach_o_64.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/magic.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/magic.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/nm.c">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/print_otool.c">
 			<Option target="nm_otool"/>
 		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/nmotool.h">
-			<Option target="nm_otool"/>
-		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/print_nm.c">
-			<Option target="nm_otool"/>
-		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/print_nm_m_p_two.c">
-			<Option target="nm_otool"/>
-		</Unit>
-		<Unit filename="/Users/ib/cxim/nm-otool/CMakeLists.txt">
+		<Unit filename="/Users/mnarwhal/Desktop/nm-otool/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

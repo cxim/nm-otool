@@ -58,7 +58,7 @@ void	output_mach_o_otool(char *flb, t_sect sect, char arch_size)
 	char		c;
 
 	i = 0;
-	write(1, "(__TEXT,__text) section\n", 24);
+	ft_putstr("Contents of (__TEXT,__text) section\n");
 	while (i < sect.size)
 	{
 		c = 0;
@@ -70,7 +70,7 @@ void	output_mach_o_otool(char *flb, t_sect sect, char arch_size)
 		}
 		out_mach_o_tool_p_two(arch_size, c);
 		print_addr_otool(i + sect.addr);
-		write(1, " ", 1);
+		write(1, "\t", 1);
 		output_content(flb, i + sect.offset, sect.size + sect.offset);
 		write(1, "\n", 1);
 		i += 16;

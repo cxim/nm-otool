@@ -7,27 +7,43 @@ include_directories(.)
 include_directories(libft)
 
 add_executable(nm_otool
-		libft/ft_putchar.c
-		libft/ft_putchar_fd.c
-		libft/ft_putchar_mod.c
-		libft/ft_putendl.c
-		libft/ft_putendl_fd.c
-		libft/ft_putstr.c
-		libft/ft_putstr_fd.c
-		libft/ft_putstr_mod.c
-		libft/ft_strcmp.c
-		libft/libft.h
-		cpu_file.c
-		errors.c
-		fat_o.c
-		fat_o_64.c
-		file_inside.c
-		lst_fuctions.c
-		mach_o.c
-		mach_o_32_64.c
-		mach_o_64.c
-		magic.c
-		nm.c
-		nmotool.h
-		print_nm.c
-		libft/ft_strlen.c print_nm_m_p_two.c)
+libft/ft_putchar.c
+libft/ft_putchar_fd.c
+libft/ft_putchar_mod.c
+libft/ft_putendl.c
+libft/ft_putendl_fd.c
+libft/ft_putstr.c
+libft/ft_putstr_fd.c
+libft/ft_putstr_mod.c
+libft/ft_strcmp.c
+libft/libft.h
+errors.c magic.c mach_o.c lst_fuctions.c cpu_file.c mach_o_64.c mach_o_32_64.c
+otool.c mach_o_otool.c print_otool.c fat_otool.c fat_otool_64.c)
+
+#(nm_otool
+#		libft/ft_putchar.c
+#		libft/ft_putchar_fd.c
+#		libft/ft_putchar_mod.c
+#		libft/ft_putendl.c
+#		libft/ft_putendl_fd.c
+#		libft/ft_putstr.c
+#		libft/ft_putstr_fd.c
+#		libft/ft_putstr_mod.c
+#		libft/ft_strcmp.c
+#		libft/libft.h
+#		cpu_file.c
+#		errors.c
+#		fat_o.c
+#		fat_o_64.c
+#		file_inside.c
+#		lst_fuctions.c
+#		mach_o.c
+#		mach_o_32_64.c
+#		mach_o_64.c
+#		magic.c
+#		nm.c
+#		nmotool.h
+#		print_nm.c
+#		libft/ft_strlen.c print_nm_m_p_two.c)
+
+

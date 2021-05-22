@@ -1,67 +1,66 @@
-0000000100008048 d __dyld_private
 0000000100000000 T __mh_execute_header
-00000001000011b0 T _check_error_nm
-0000000100001db0 T _check_it_32
-0000000100002180 T _check_it_64
+00000001000011c0 T _check_error_nm
+0000000100001cc0 T _check_it_32
+0000000100002060 T _check_it_64
 0000000100003b00 T _check_part_segment
 0000000100003a50 T _check_part_segment_64
                  U _close
-0000000100002580 T _errors_nm_otool
+0000000100002570 T _errors_nm_otool
                  U _exit
-0000000100002040 T _fat_o_32
-0000000100002340 T _fat_o_64
-0000000100003360 T _find_cpu
-0000000100003310 T _find_cpu_part_two
-00000001000015a0 T _find_file
+0000000100001f20 T _fat_o_32
+0000000100002200 T _fat_o_64
+0000000100003340 T _find_cpu
+00000001000032f0 T _find_cpu_part_two
+0000000100001470 T _find_file
                  U _free
-0000000100002f20 T _free_lst
+0000000100002f00 T _free_lst
                  U _fstat$INODE64
-0000000100002480 T _ft_put_name
+0000000100002330 T _ft_put_name
 0000000100003bb0 T _ft_putchar
 0000000100003be0 T _ft_putchar_fd
 0000000100003c10 T _ft_putstr
 0000000100003c70 T _ft_putstr_fd
 0000000100003cd0 T _ft_strcmp
 0000000100003d50 T _ft_strlen
-0000000100001360 T _get_agg
-0000000100002890 T _get_endian_reverse
-0000000100001210 T _get_info_file
-0000000100002970 T _get_sect_tab
-00000001000034b0 T _get_sect_tab_64
+0000000100002360 T _get_agg
+0000000100002880 T _get_endian_reverse
+0000000100001220 T _get_info_file
+0000000100002960 T _get_sect_tab
+0000000100003490 T _get_sect_tab_64
 0000000100002c20 T _get_symtab_32
 0000000100003750 T _get_symtab_64
-0000000100001aa0 T _hex_output
-00000001000014a0 T _init
-0000000100001f70 T _init_fat_o
-0000000100001450 T _init_flags
-00000001000024b0 T _init_part_two
-0000000100002f70 T _is_sorted
-0000000100001ea0 T _len_flb_32
-0000000100002270 T _len_flb_64
+0000000100001980 T _hex_output
+0000000100001370 T _init
+0000000100001e60 T _init_fat_o
+0000000100002450 T _init_flags
+00000001000024a0 T _init_part_two
+0000000100002f50 T _is_sorted
+0000000100001da0 T _len_flb_32
+0000000100002140 T _len_flb_64
 0000000100002d30 T _mach_o_32
 0000000100003860 T _mach_o_64
-0000000100001630 T _main
+0000000100001500 T _main
                  U _malloc
                  U _mmap
                  U _munmap
-00000001000031e0 T _new_elem_lst
+00000001000031c0 T _new_elem_lst
                  U _open
-0000000100001b80 T _out_mach_nm_p_two
-0000000100001fc0 T _output_header
-0000000100001b00 T _print_addr
-0000000100001c60 T _print_lst
-0000000100001bf0 T _print_o
-00000001000026b0 T _reverse_size
-0000000100001800 T _solo_func
-0000000100003050 T _sort_lst_two
-00000001000030c0 T _sorting_lst
-0000000100002760 T _swap_bytes
-0000000100002810 T _swap_bytes_fat
-0000000100002b30 T _type
-0000000100003660 T _type_64
-0000000100002a70 T _type_part_two
-00000001000035a0 T _type_part_two_64
-0000000100001840 T _work_ins_bin_p_two
-00000001000018f0 T _work_inside_binary
+0000000100001a70 T _out_mach_nm_p_two
+0000000100001ea0 T _output_header
+00000001000019f0 T _print_addr
+0000000100001b60 T _print_lst
+0000000100001af0 T _print_o
+00000001000026a0 T _reverse_size
+00000001000016d0 T _solo_func
+0000000100003030 T _sort_lst_two
+00000001000030a0 T _sorting_lst
+0000000100002750 T _swap_bytes
+0000000100002800 T _swap_bytes_fat
+0000000100002b20 T _type
+0000000100003650 T _type_64
+0000000100002a60 T _type_part_two
+0000000100003590 T _type_part_two_64
+0000000100001710 T _work_ins_bin_p_two
+00000001000017c0 T _work_inside_binary
                  U _write
                  U dyld_stub_binder
